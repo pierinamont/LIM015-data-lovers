@@ -1,8 +1,9 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 html {
     font-size: 62.5%;
     font-family: 'Montserrat', sans-serif;
@@ -13,9 +14,11 @@ html {
     --body-color: #EEEFE1;
     --green-buttons: #15B266;
 }
+
 body {
     margin: 0px;
 }
+
 header {
     background-color: var(--header-color);
     color: white;
@@ -28,21 +31,46 @@ header {
     width: 100%;
     height: 70px;
 }
+
 header {
     list-style: none;
     display: flex;
     margin-right: 80px;
 }
 
-@media (max-width: 1000px){
+nav {
+    display: flex;
+    text-align: right;
+    padding: 30px 50px 0 0;
+    background-color: black;
+    height: 70px;
+}
+
+nav>a {
+    color: #fff;
+    font-weight: 100;
+    text-decoration: none;
+    margin-right: 10px;
+    display: inline-block;
+    padding: 3px 15px;
+    line-height: normal;
+    transition: all 500ms ease;
+    border-bottom: 4px solid transparent;
+}
+
+nav>a:hover {
+    color: rgb(216, 125, 224);
+    border-bottom: 4px solid rgb(216, 125, 224);
+    ;
+}
+
+@media (max-width: 1000px) {
     header {
         justify-content: flex-start;
         font-size: 1.4rem;
     }
-    header a{
+    header a {
         flex-direction: column;
         margin-bottom: 8px;
     }
-    
-    
 }
