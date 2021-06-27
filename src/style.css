@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+    --header-color: #00000E;
+    --body-color: #EEEFE1;
+    --green-buttons: #15B266;
+}
+body {
+    margin: 0px;
+}
+header {
+    background-color: var(--header-color);
+    color: white;
+    overflow: hidden;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 15px;
+    width: 100%;
+}
+header ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+header li {
+    margin-right: 15px;
+    cursor: pointer;
+}
