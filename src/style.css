@@ -26,26 +26,23 @@ header {
     font-weight: bold;
     padding: 15px;
     width: 100%;
+    height: 70px;
 }
-header ul {
+header {
     list-style: none;
     display: flex;
     margin-right: 80px;
 }
-header li {
-    margin-right: 15px;
-    cursor: pointer;
-}
+
 @media (max-width: 1000px){
     header {
         justify-content: flex-start;
         font-size: 1.4rem;
     }
-    header ul{
+    header a{
         flex-direction: column;
-    }
-    header ul li{
         margin-bottom: 8px;
     }
+    
     
 }
