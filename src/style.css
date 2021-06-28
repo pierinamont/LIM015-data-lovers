@@ -113,3 +113,28 @@ nav>a:hover {
         width: 300px;
     }
 }
+
+
+/* SECCION HAYAO */
+
+.section_creator {
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-top: 50px;
+}
+
+.section_creator-container {
+    margin: 0 auto;
+    width: 330px;
+    text-align: center;
+    font-size: 1.4rem;
+}
+
+.section_creator-container img {
+    width: 150px;
+    height: auto;
+}
+
+.section_creator-container .p_name {
+    font-weight: bold;
+}
