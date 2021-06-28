@@ -3,18 +3,18 @@
     padding: 0;
     box-sizing: border-box;
 }
-html {
-    font-size: 62.5%;
-}
 
 :root {
     --header-color: #000000;
     --body-color: #EEEFE1;
 }
+html {
+    font-size: 62.5%;
+}
 
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: var(--background-color);
+    background-color: var(--body-color);
 }
 
 .contenedor {
@@ -35,7 +35,7 @@ body {
 .titulo .cartoon {
     width: 50px;
     height: 50px;
-    display: inline;
+    
     background-image: url("./images/animacion-totoro.svg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -140,7 +140,13 @@ main .sobre-nosotros {
     display: flex;
     justify-content: space-evenly;
 }
-
+@media (max-width: 600px) {
+    .contenedor-sobre-nosotros {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
 .imagen-about-us1 {
     height: auto;
 
@@ -173,71 +179,29 @@ main .sobre-nosotros {
     border-radius: 15px;
     box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
 }
-
-
-/*hayao*/
-
-.seccion-hayao {
-    background: #fff;
-    padding-bottom: 30px;
-}
-
-.hayao-cont {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hayao-ind {
-    width: 28%;
+/*SECCION HAYAO*/
+.section_creator {
+    margin: 0 auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 400px;
     text-align: center;
 }
-
-.hayao-ind img {
-    width: 90%;
+.section_creator-container {
+    margin: 0 auto;
+    font-size: 1.4rem;
+}
+.section_creator-container img{
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
 }
 
-.hayao-ind p {
-    font-weight: 300;
-    text-align: justify;
+.section_creator-container .p_name {
+    font-weight: bold;
 }
-
-.h5 {
-    font-weight: 300;
-    text-align: center;
-}
-
-@media screen and (max-width:900px) {
-    header {
-        background-position: center;
-    }
-    .contenedor-sobre-nosotros {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    .sobre-nosotros .contenido-textos {
-        width: 90%;
-    }
-    .imagen-about-us1 {
-        width: 90%;
-    }
-    .imagen-about-us2 {
-        width: 90%;
-    }
-    .imagen-about-us3 {
-        width: 90%;
-    }
-    /* hayao */
-    .hayao-cont {
-        justify-content: center;
-        flex-direction: column;
-    }
-    .hayao-ind {
-        width: 100%;
-        text-align: center;
-    }
-    .hayao-ind img {
-        width: 27%;
+@media (max-width: 480px) {
+    .section_creator {
+        width: 300px;
     }
 }
