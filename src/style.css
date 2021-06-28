@@ -91,7 +91,6 @@ nav>a:hover {
     justify-content: center;
     align-items: center;
     margin: 0 auto;
-    margin-top: 30%;
     height: 60px;
     width: 215px;
     border: none;
@@ -133,6 +132,7 @@ nav>a:hover {
 .section_creator-container img {
     width: 150px;
     height: auto;
+    margin-bottom: 15px;
 }
 
 .section_creator-container .p_name {
