@@ -125,6 +125,39 @@ main .sobre-nosotros {
     box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
 }
 
+
+/*hayao*/
+
+.seccion-hayao {
+    background: #fff;
+    padding-bottom: 30px;
+}
+
+.hayao-cont {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hayao-ind {
+    width: 28%;
+    text-align: center;
+}
+
+.hayao-ind img {
+    width: 90%;
+}
+
+.hayao-ind p {
+    font-weight: 300;
+    text-align: justify;
+}
+
+.h5 {
+    font-weight: 300;
+    text-align: center;
+}
+
 @media screen and (max-width:900px) {
     header {
         background-position: center;
@@ -145,5 +178,17 @@ main .sobre-nosotros {
     }
     .imagen-about-us3 {
         width: 90%;
+    }
+    /* hayao */
+    .hayao-cont {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .hayao-ind {
+        width: 100%;
+        text-align: center;
+    }
+    .hayao-ind img {
+        width: 27%;
     }
 }
