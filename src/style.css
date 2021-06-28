@@ -12,7 +12,7 @@ html {
 :root {
     --header-color: #00000E;
     --body-color: #EEEFE1;
-    --nav-transition:  rgb(216, 125, 224);
+    --nav-transition: rgb(216, 125, 224);
     --green-buttons: #15B266;
 }
 
@@ -20,7 +20,10 @@ body {
     margin: 0px;
     background-color: var(--body-color);
 }
+
+
 /*SECCION HEADER*/
+
 header {
     background-color: var(--header-color);
     color: white;
@@ -60,7 +63,9 @@ nav>a:hover {
     border-bottom: 4px solid var(--nav-transition);
 }
 
+
 /*SECCION PORTADA*/
+
 .section_cover-page {
     width: 100%;
     height: 800px;
@@ -77,14 +82,16 @@ nav>a:hover {
     padding-top: 120px;
     width: 450px;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
     margin-bottom: 100px;
 }
+
 .section_cover-page button {
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+    margin-top: 30%;
     height: 60px;
     width: 215px;
     border: none;
@@ -96,34 +103,38 @@ nav>a:hover {
     cursor: pointer;
 }
 
-@media (max-width: 600px){
+@media (max-width: 600px) {
     .section_cover-page {
         width: 100%;
         height: 720px;
     }
-    .section_cover-page img  {
+    .section_cover-page img {
         padding-top: 150px;
         width: 300px;
     }
 }
 
+
 /* SECCION HAYAO */
+
 .section_creator {
     margin: 0 auto;
     margin-top: 50px;
     margin-top: 50px;
 }
+
 .section_creator-container {
     margin: 0 auto;
     width: 330px;
     text-align: center;
     font-size: 1.4rem;
 }
-.section_creator-container img{
+
+.section_creator-container img {
     width: 150px;
     height: auto;
-
 }
+
 .section_creator-container .p_name {
     font-weight: bold;
 }
