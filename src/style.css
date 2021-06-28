@@ -102,6 +102,12 @@ nav>a:hover {
     cursor: pointer;
 }
 
+@media (max-width: 500px) {
+    header {
+        justify-content: end;
+    }
+}
+
 @media (max-width: 600px) {
     .section_cover-page {
         width: 100%;
