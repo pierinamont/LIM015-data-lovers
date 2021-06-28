@@ -18,13 +18,13 @@
     <!--PANTALLA PRINCIPAL-->
     <header>
         <nav>
-            <a href="#">Creaciones</a>
+            <a href="#creaciones">Creaciones</a>
             <a href="#">Vídeos</a>
             <a href="#">Merchandising</a>
         </nav>
         <section class="section_cover-page">
             <img src="./images/ghibli-white.svg" alt="logo de studio ghibli">
-            <button>Nuestras Creaciones</button>
+            <a href="#creaciones">Nuestras Creaciones</a>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;">
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
@@ -61,7 +61,36 @@
             <p class="p_name">Hayao Miyazaki </p>
         </div>
     </section>
-    <div id="root"></div>
+
+    <!--SECCION OPCIONES-->
+    <section class="section_select-option">
+        <h2 id="creaciones">Creaciones</h2><br>
+
+        <div class="div_select-container">
+            <select class="sort-items">
+                <option selected disabled>Ordenar según</option>
+                <option value="puntuación">Puntuación</option>
+                <option value="animaciones recientes">Animaciones más recientes</option>
+            </select>
+        
+            <select class="filter-items">
+                <option selected disabled>Filtrar películas</option>
+                <option value="mejor valoradas">Mejor Valoradas</option>
+                <option value="top 5">Top 5 más populares</option>
+            </select>
+        
+            <select class="filter-items">
+                <option selected disabled>Géneros</option>
+                <option value="Romance">Romance</option>
+                <option value="Drama">Drama</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Acción">Acción</option>
+            </select>
+        </div>
+
+    </section>
+    <div id="root">
+    </div>
       
     </main>
     <script src="main.js" type="module"></script>
