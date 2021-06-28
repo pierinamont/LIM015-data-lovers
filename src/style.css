@@ -1,89 +1,63 @@
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-
-html {
-    font-size: 62.5%;
-    font-family: 'Montserrat', sans-serif;
-}
-
-:root {
-    --header-color: #00000E;
-    --body-color: #EEEFE1;
-    --nav-transition: rgb(216, 125, 224);
-    --green-buttons: #15B266;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0px;
-    background-color: var(--body-color);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #642a73;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 
-/*SECCION HEADER*/
+/* Header */
 
 header {
-    background-color: var(--header-color);
-    color: white;
-    overflow: hidden;
-    display: flex;
-    justify-content: flex-end;
-    font-size: 1.4rem;
-    padding: 15px;
     width: 100%;
-    height: 70px;
-    align-items: center;
+    height: 600px;
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.151), hsla(317, 45%, 52%, 0.349)), url(images/background.png);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.185), hsla(317, 45%, 52%, 0.301)), url(images/background.png);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
 }
 
 nav {
-    display: flex;
     text-align: right;
     padding: 30px 50px 0 0;
     background-color: black;
-    height: 70px;
-    padding-top: 20px;
 }
 
 nav>a {
     color: #fff;
-    font-weight: 100;
+    font-weight: 300;
     text-decoration: none;
     margin-right: 10px;
-    display: inline-block;
-    padding: 3px 15px;
-    line-height: normal;
     transition: all 500ms ease;
     border-bottom: 4px solid transparent;
 }
 
 nav>a:hover {
-    color: var(--nav-transition);
-    border-bottom: 4px solid var(--nav-transition);
-}
-
-
-/*SECCION PORTADA*/
-
-.section_cover-page {
-    width: 100%;
-    height: 800px;
-    background-image: url("./images/background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    overflow: hidden;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.section_cover-page img {
-    padding-top: 120px;
-    width: 450px;
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 100px;
+    color: rgb(216, 125, 224);
+    border-bottom: 4px solid rgb(216, 125, 224);
 }
 
 .section_cover-page button {
@@ -100,47 +74,79 @@ nav>a:hover {
     color: white;
     background-color: var(--header-color);
     cursor: pointer;
+    padding-top: 220px;
 }
 
-@media (max-width: 500px) {
-    header {
-        justify-content: end;
-    }
-}
-
-@media (max-width: 600px) {
-    .section_cover-page {
-        width: 100%;
-        height: 720px;
-    }
-    .section_cover-page img {
-        padding-top: 150px;
-        width: 300px;
-    }
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
 
-/* SECCION HAYAO */
+/* About us */
 
-.section_creator {
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-top: 50px;
+main .sobre-nosotros {
+    padding: 30px 0 60px 0;
 }
 
-.section_creator-container {
-    margin: 0 auto;
-    width: 330px;
-    text-align: center;
-    font-size: 1.4rem;
+.contenedor-sobre-nosotros {
+    display: flex;
+    justify-content: space-evenly;
 }
 
-.section_creator-container img {
-    width: 150px;
+.imagen-about-us1 {
     height: auto;
+
+    width: auto;
+    max-height: 30%;
+    max-width: 30%;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .5);
     margin-bottom: 15px;
+
 }
 
-.section_creator-container .p_name {
-    font-weight: bold;
+.imagen-about-us2 {
+    height: auto;
+    width: auto;
+    max-height: 30%;
+    max-width: 30%;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-about-us3 {
+    height: auto;
+    width: auto;
+    max-height: 30%;
+    max-width: 30%;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
+}
+
+@media screen and (max-width:900px) {
+    header {
+        background-position: center;
+    }
+    .contenedor-sobre-nosotros {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre-nosotros .contenido-textos {
+        width: 90%;
+    }
+    .imagen-about-us1 {
+        width: 90%;
+    }
+    .imagen-about-us2 {
+        width: 90%;
+    }
+    .imagen-about-us3 {
+        width: 90%;
+    }
 }

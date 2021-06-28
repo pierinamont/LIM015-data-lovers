@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
+
 <body>
     <!--PANTALLA PRINCIPAL-->
     <header>
@@ -19,13 +20,25 @@
             <a href="#">Vídeos</a>
             <a href="#">Merchandising</a>
         </nav>
+        <section class="section_cover-page">
+            <button>Nuestras Creaciones</button>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                    <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                        style="stroke: none; fill: #fff;"></path>
+                </svg></div>
     </header>
-    <section class="section_cover-page">
-        <img src="./images/ghibli-white.svg" alt="logo de studio ghibli">
-        <button>Nuestras Creaciones</button>
 
-    </section>
+    <main>
+        <section class="contenedor sobre-nosotros">
+            <h2 class="titulo">Studio Ghibli</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="images/paisajes.png" alt="" class="imagen-about-us1">
+                <img src="images/peliculas.png" alt="" class="imagen-about-us2">
+                <img src="images/historia.png" alt="" class="imagen-about-us3">
 
+            </div>
+        </section>
 
 
      <!--SECCION HAYAO-->
@@ -37,7 +50,10 @@
         </div>
     </section>
     <div id="root"></div>
+      
+    </main>
     <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
