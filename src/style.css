@@ -97,12 +97,15 @@ main .sobre-nosotros {
 
 .imagen-about-us1 {
     height: auto;
+
     width: auto;
     max-height: 30%;
     max-width: 30%;
     margin: 10px;
     border-radius: 15px;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, .5);
+    margin-bottom: 15px;
+
 }
 
 .imagen-about-us2 {
