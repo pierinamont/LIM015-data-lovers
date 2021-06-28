@@ -7,12 +7,14 @@ html {
     font-size: 62.5%;
 }
 
-body {
-    font-family: 'Montserrat', sans-serif;
-}
-
 :root {
     --header-color: #000000;
+    --body-color: #EEEFE1;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--background-color);
 }
 
 .contenedor {
@@ -24,12 +26,20 @@ body {
 }
 
 .titulo {
-    color: #642a73;
+    color: var(--header-color);
+    font-family: 'Castoro', serif;;
     font-size: 3.5rem;
     text-align: center;
     margin-bottom: 60px;
 }
-
+.titulo .cartoon {
+    width: 50px;
+    height: 50px;
+    display: inline;
+    background-image: url("./images/animacion-totoro.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
 
 /* Header */
 
@@ -63,6 +73,7 @@ nav>a {
     margin-right: 10px;
     transition: all 500ms ease;
     border-bottom: 4px solid transparent;
+    padding-bottom: 20px;
 }
 
 nav>a:hover {
