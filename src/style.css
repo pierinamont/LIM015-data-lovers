@@ -130,55 +130,82 @@ nav>a:hover {
 }
 
 
-/* About us */
 
-main .sobre-nosotros {
-    padding: 30px 0 60px 0;
+/*SECCION DE INFORMACIÓN ADICIONAL*/
+.info-title {
+    font-size: 3.8rem;
+    margin-top: 100px;
+    text-align: center;
+    font-family: Castoro;
+    font-weight: bold;
 }
-
-.contenedor-sobre-nosotros {
+.section_about-us {
+    margin: 0 auto;
     display: flex;
-    justify-content: space-evenly;
-}
-@media (max-width: 600px) {
-    .contenedor-sobre-nosotros {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-}
-.imagen-about-us1 {
-    height: auto;
-
-    width: auto;
-    max-height: 30%;
-    max-width: 30%;
-    margin: 10px;
-    border-radius: 15px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .5);
-    margin-bottom: 15px;
-
+    justify-content: center;
+    margin-top: 50px;
+   
 }
 
-.imagen-about-us2 {
-    height: auto;
-    width: auto;
-    max-height: 30%;
-    max-width: 30%;
-    margin: 10px;
-    border-radius: 15px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, .5);
+.container_about-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
 }
-
-.imagen-about-us3 {
-    height: auto;
-    width: auto;
-    max-height: 30%;
-    max-width: 30%;
-    margin: 10px;
-    border-radius: 15px;
+.about-us-img .span1 {
+    background-image: url("./images/paisajes.png");
+    margin: 0 auto;
+    margin: 8px;
+    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
+    
+}
+.about-us-img .span2 {
+    background-image: url("./images/peliculas.png");
+    margin: 0 auto;
+    margin: 8px;
+    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
+    
+}
+.about-us-img .span3 {
+    background-image: url("./images/historia.png");
+    margin: 0 auto;
+    background-position: 0px;
+    margin: 8px;
+    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
+    
+}
+.about-us-img span {
+    display:inline-block;
+    width: 260px;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.about-us-img span:hover {
     box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
 }
+
+.about-us-img p {
+    padding-top: 10px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    .about-us-img span {
+        width: 180px;
+        height: 280px;
+    }
+}
+
 /*SECCION HAYAO*/
 .section_creator {
     margin: 0 auto;
