@@ -7,11 +7,10 @@ html {
     font-size: 62.5%;
 }
 :root {
-    --header-color: #000000;
+    --header-color: hsla(245, 37%, 12%, 0.712);
     --body-color: #EEEFE1;
     --green-btn: #15B266;
 }
-
 
 body {
     font-family: 'Montserrat', sans-serif;
@@ -21,9 +20,19 @@ body {
 .titulo {
     color: var(--header-color);
     font-family: 'Castoro', serif;
-    font-size: 3.5rem; 
+    font-size: 3.5rem;
+    text-align: center;
     margin-bottom: 60px;
 }
+
+.titulo .cartoon {
+    width: 50px;
+    height: 50px;
+    background-image: url("./images/animacion-totoro.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 
 /* Header */
 
@@ -34,7 +43,7 @@ header {
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.151), hsla(317, 45%, 52%, 0.349)), url(images/background.png);
     /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.185), hsla(317, 45%, 52%, 0.301)), url(images/background.png);
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.164), hsla(317, 45%, 52%, 0.301)), url(images/background.png);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     background-size: cover;
     background-attachment: fixed;
@@ -47,7 +56,6 @@ nav {
     padding: 30px 50px 0 0;
     background-color: black;
     height: 70px;
-
 }
 
 nav>a {
@@ -64,6 +72,7 @@ nav>a:hover {
     color: rgb(216, 125, 224);
     border-bottom: 4px solid rgb(216, 125, 224);
 }
+
 .section_cover-page img {
     margin: 0 auto;
     position: absolute;
@@ -73,6 +82,7 @@ nav>a:hover {
     right: 0;
     top: 20%;
 }
+
 .section_cover-page a {
     text-decoration: none;
     padding-top: 20px;
@@ -91,14 +101,16 @@ nav>a:hover {
     cursor: pointer;
     top: 60%;
 }
+
 @media (max-width: 800px) {
-    .section_cover-page img  {
+    .section_cover-page img {
         width: 420px;
         height: auto;
     }
 }
+
 @media (max-width: 550px) {
-    .section_cover-page img  {
+    .section_cover-page img {
         width: 320px;
         height: auto;
     }
@@ -114,6 +126,7 @@ nav>a:hover {
 }
 
 /*SECCION HAYAO*/
+
 .section_creator {
     margin: 0 auto; 
     margin-top: 50px;
@@ -121,11 +134,13 @@ nav>a:hover {
     width: 430px;
     text-align: center;
 }
+
 .section_creator-container {
     margin: 0 auto;
     font-size: 1.5rem; 
 }
-.section_creator-container img{
+
+.section_creator-container img {
     width: 150px;
     height: auto;
     margin-bottom: 20px;
@@ -136,14 +151,17 @@ nav>a:hover {
 .section_creator-container .p_name {
     font-weight: bold;
 }
+
 @media (max-width: 480px) {
     .section_creator {
         width: 300px;
     }
 }
+
 .section_select-option {
     margin: 0 auto;
 }
+
 .section_select-option h2 {
     margin-left: 270px;
     margin-right: 270px;
@@ -151,6 +169,7 @@ nav>a:hover {
     font-family: Castoro;
     font-weight: bold;
 }
+
 .div_select-container {
     margin-left: 270px;
     margin-right: 270px;
@@ -175,19 +194,20 @@ select {
     margin-bottom: 8px;
 }
 
+
 /*SECCION DE PELICULAS EN CARDS*/
 
 .section_movie-cards {
     margin-left: 240px;
     margin-right: 240px;
-    
 }
+
 .movie-cards-root {
-    display: flex; 
+    display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    
 }
+
 .div-container {
     height: 280px;
     width: 230px;
@@ -197,20 +217,21 @@ select {
     margin-bottom: 25px;
     background-color: white;
     border-radius: 20px;
-  }
-  .div-container_img {
+}
+
+.div-container_img {
     width: 160px;
     height: auto;
     margin-top: 25px;
     margin-bottom: 8px;
-  }
-  
-  .div-container p {
+}
+
+.div-container p {
     font-size: 1.5rem;
     margin-bottom: 4px;
     font-weight: bold;
-  }
-  .div-container .date {
-    font-weight: 400;
-  }
+}
 
+.div-container .date {
+    font-weight: 400;
+}
