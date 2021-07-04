@@ -8,8 +8,7 @@
     <title>Studio Ghibli</title>
     <link rel="shortcut icon" href="./images/Totoro-cabeza.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" 
-    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
 </head>
 
@@ -35,199 +34,203 @@
 
     <main>
 
-    <!--SECCION INFORMACIÓN ADICIONAL -->
-    <h2 class="info-title">Studio Ghibli</h2>
-    <section class="section_about-us">
-        <div class="container_about-us">
-            <div class="about-us-img">
-                <span class="span1"></span>
-                <p>Paisajes</p>
+        <!--SECCION INFORMACIÓN ADICIONAL -->
+        <h2 class="info-title">Studio Ghibli</h2>
+        <section class="section_about-us">
+            <div class="container_about-us">
+                <div class="about-us-img">
+                    <span class="span1"></span>
+                    <p>Paisajes</p>
+                </div>
+                <div class="about-us-img">
+                    <span class="span2"></span>
+                    <p>Películas</p>
+                </div>
+                <div class="about-us-img">
+                    <span class="span3"></span>
+                    <p>Historia</p>
+                </div>
             </div>
-            <div class="about-us-img">
-                <span class="span2"></span>
-                <p>Películas</p>
+        </section>
+        <!--SECCION HAYAO-->
+        <section class="section_creator">
+            <div class="section_creator-container">
+                <img class="img-hayao" src="./images/hayao.png" alt="">
+                <p>“I do believe in the power of story. I believe that stories have an important role to play in the formation of human beings, that they can stimulate, amaze and inspire their listeners.”</p><br>
+                <p class="p_name">Hayao Miyazaki </p>
             </div>
-            <div class="about-us-img">
-                <span class="span3"></span>
-                <p>Historia</p>
-            </div>
-        </div>
-    </section>
-     <!--SECCION HAYAO-->
-    <section class="section_creator">
-        <div class="section_creator-container">
-            <img class="img-hayao"src="./images/hayao.png" alt="">
-            <p>“I do believe in the power of story. I believe that stories have an important role to play in the formation of human beings, that they can stimulate, amaze and inspire their listeners.”</p><br>
-            <p class="p_name">Hayao Miyazaki </p>
-        </div>
-    </section>
+        </section>
 
-    <!--SECCION OPCIONES-->
-    <section class="section_select-option">
-        <h2 id="creaciones">Creaciones</h2><br>
+        <!--SECCION OPCIONES-->
+        <section class="section_select-option">
+            <h2 id="creaciones">Creaciones</h2><br>
 
-        <div class="div_select-container">
-            <select class="sort-items">
+            <div class="div_select-container">
+                <select class="sort-items">
                 <option selected disabled>Ordenar según</option>
                 <option value="puntuación">Puntuación</option>
                 <option value="animaciones recientes">Animaciones más recientes</option>
             </select>
-        
-            <select class="filter-items">
+
+                <select class="filter-items">
                 <option selected disabled>Filtrar películas</option>
                 <option value="mejor valoradas">Mejor Valoradas</option>
                 <option value="top 5">Top 5 más populares</option>
             </select>
-        
-            <select class="filter-items">
+
+                <select class="filter-items">
                 <option selected disabled>Géneros</option>
                 <option value="Romance">Romance</option>
                 <option value="Drama">Drama</option>
                 <option value="Aventura">Aventura</option>
                 <option value="Acción">Acción</option>
             </select>
-        </div>
-    </section>
+            </div>
+        </section>
 
-      <!--SECCION DE PELICULAS EN CARDS-->
-    <section class="section_movie-cards">
-        <div class="movie-cards-root" id="root">
-            <!--1-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/castillo-cielo.png" alt="">
-                <p>El castillo<br>en el cielo</p>
-                <p class="date">1986</p>
+        <!--SECCION DE PELICULAS (prueba)-->
+        <div id="container-movie"></div>
+
+
+        <!--SECCION DE PELICULAS EN CARDS-->
+        <section class="section_movie-cards">
+            <div class="movie-cards-root" id="root">
+                <!--1-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/castillo-cielo.png" alt="">
+                    <p>El castillo<br>en el cielo</p>
+                    <p class="date">1986</p>
+                </div>
+                <!--2-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/luciernagas.png" alt="">
+                    <p>La tumba de<br>las luciérnagas</p>
+                    <p class="date">1988</p>
+                </div>
+                <!--3-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/totoro.png" alt="">
+                    <p>Mi vecino<br>Totoro</p>
+                    <p class="date">1988</p>
+                </div>
+                <!--4-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/kiki.png" alt="">
+                    <p>Kiki: Entregas<br>a domicilio</p>
+                    <p class="date">1989</p>
+                </div>
+                <!--5-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/recuerdos.png" alt="">
+                    <p>Recuerdos<br>del ayer</p>
+                    <p class="date">1991</p>
+                </div>
+                <!--6-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/porco.png" alt="">
+                    <p>Porco Rosso</p>
+                    <p class="date">1992</p>
+                </div>
+                <!--7-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/mar.png" alt="">
+                    <p>Puedo escuchar<br>el mar</p>
+                    <p class="date">1993</p>
+                </div>
+                <!--8-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/pompok.png" alt="">
+                    <p>Pompoko</p>
+                    <p class="date">1994</p>
+                </div>
+                <!--9-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/corazon.png" alt="">
+                    <p>Susurros<br>del corazón</p>
+                    <p class="date">1995</p>
+                </div>
+                <!--10-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/monoke.png" alt="">
+                    <p>La princesa<br>Mononoke</p>
+                    <p class="date">1997</p>
+                </div>
+                <!--11-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/yamada.png" alt="">
+                    <p>Mis vecinos<br>Los Yamada</p>
+                    <p class="date">1999</p>
+                </div>
+                <!--12-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/viaje-chihiro.png" alt="">
+                    <p>El viaje<br>de Chihiro</p>
+                    <p class="date">2001</p>
+                </div>
+                <!--13-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/gato.png" alt="">
+                    <p>El regreso<br>del gato</p>
+                    <p class="date">2002</p>
+                </div>
+                <!--14-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/castillo-vagabundo.png" alt="">
+                    <p>El castillo<br>ambulante</p>
+                    <p class="date">2004</p>
+                </div>
+                <!--15-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/terramar.png" alt="">
+                    <p>Cuentos de<br>Terramar</p>
+                    <p class="date">2006</p>
+                </div>
+                <!--16-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/ponyo.png" alt="">
+                    <p>Ponyo y el secreto<br>de la sirenita</p>
+                    <p class="date">2008</p>
+                </div>
+                <!--17-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/arriety.png" alt="">
+                    <p>El mundo secreto<br>de Arriety</p>
+                    <p class="date">2010</p>
+                </div>
+                <!--18-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/amapolas.png" alt="">
+                    <p>La colina<br>de las amapolas</p>
+                    <p class="date">2011</p>
+                </div>
+                <!--19-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/viento.png" alt="">
+                    <p>Se levanta<br>el viento</p>
+                    <p class="date">2013</p>
+                </div>
+                <!--20-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/kaguya.png" alt="">
+                    <p>El cuento de<br>la princesa Kaguya</p>
+                    <p class="date">2013</p>
+                </div>
+                <!--21-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/marnie.png" alt="">
+                    <p>El recuerdo<br>de Marnie</p>
+                    <p class="date">2014</p>
+                </div>
+                <!--22-->
+                <div class="div-container">
+                    <img class="div-container_img" src="./images/earwig.png" alt="">
+                    <p>Earwig y<br>la bruja</p>
+                    <p class="date">2020</p>
+                </div>
             </div>
-            <!--2-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/luciernagas.png" alt="">
-                <p>La tumba de<br>las luciérnagas</p>
-                <p class="date">1988</p>
-            </div>
-            <!--3-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/totoro.png" alt="">
-                <p>Mi vecino<br>Totoro</p>
-                <p class="date">1988</p>
-            </div>
-            <!--4-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/kiki.png" alt="">
-                <p>Kiki: Entregas<br>a domicilio</p>
-                <p class="date">1989</p>
-            </div>
-            <!--5-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/recuerdos.png" alt="">
-                <p>Recuerdos<br>del ayer</p>
-                <p class="date">1991</p>
-            </div>
-            <!--6-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/porco.png" alt="">
-                <p>Porco Rosso</p>
-                <p class="date">1992</p>
-            </div>
-            <!--7-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/mar.png" alt="">
-                <p>Puedo escuchar<br>el mar</p>
-                <p class="date">1993</p>
-            </div>
-            <!--8-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/pompok.png" alt="">
-                <p>Pompoko</p>
-                <p class="date">1994</p>
-            </div>
-            <!--9-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/corazon.png" alt="">
-                <p>Susurros<br>del corazón</p>
-                <p class="date">1995</p>
-            </div>
-            <!--10-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/monoke.png" alt="">
-                <p>La princesa<br>Mononoke</p>
-                <p class="date">1997</p>
-            </div>
-            <!--11-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/yamada.png" alt="">
-                <p>Mis vecinos<br>Los Yamada</p>
-                <p class="date">1999</p>
-            </div>
-            <!--12-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/viaje-chihiro.png" alt="">
-                <p>El viaje<br>de Chihiro</p>
-                <p class="date">2001</p>
-            </div>
-            <!--13-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/gato.png" alt="">
-                <p>El regreso<br>del gato</p>
-                <p class="date">2002</p>
-            </div>
-            <!--14-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/castillo-vagabundo.png" alt="">
-                <p>El castillo<br>ambulante</p>
-                <p class="date">2004</p>
-            </div>
-            <!--15-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/terramar.png" alt="">
-                <p>Cuentos de<br>Terramar</p>
-                <p class="date">2006</p>
-            </div>
-            <!--16-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/ponyo.png" alt="">
-                <p>Ponyo y el secreto<br>de la sirenita</p>
-                <p class="date">2008</p>
-            </div>
-            <!--17-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/arriety.png" alt="">
-                <p>El mundo secreto<br>de Arriety</p>
-                <p class="date">2010</p>
-            </div>
-            <!--18-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/amapolas.png" alt="">
-                <p>La colina<br>de las amapolas</p>
-                <p class="date">2011</p>
-            </div>
-            <!--19-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/viento.png" alt="">
-                <p>Se levanta<br>el viento</p>
-                <p class="date">2013</p>
-            </div>
-            <!--20-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/kaguya.png" alt="">
-                <p>El cuento de<br>la princesa Kaguya</p>
-                <p class="date">2013</p>
-            </div>
-            <!--21-->
-            <div class="div-container">
-                <img class="div-container_img" src="./images/marnie.png" alt="">
-                <p>El recuerdo<br>de Marnie</p>
-                <p class="date">2014</p>
-            </div>
-             <!--22-->
-             <div class="div-container">
-                <img class="div-container_img" src="./images/earwig.png" alt="">
-                <p>Earwig y<br>la bruja</p>
-                <p class="date">2020</p>
-            </div>
-        </div>
-    </section>
-   
-      
+        </section>
+
+
     </main>
     <script src="main.js" type="module"></script>
 
