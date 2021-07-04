@@ -138,99 +138,19 @@ nav>a:hover {
     width: 100%;
 }
 
-
-/*SECCION DE INFORMACIÓN ADICIONAL*/
-
-.info-title {
-    font-size: 3.5rem;
-    margin-top: 80px;
-    text-align: center;
-    font-family: Castoro;
-    font-weight: bold;
-}
-
-.section_about-us {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-.container_about-us {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.about-us-img .span1 {
-    background-image: url("./images/paisajes.png");
-    margin: 0 auto;
-    margin: 8px;
-    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
-}
-
-.about-us-img .span2 {
-    background-image: url("./images/peliculas.png");
-    margin: 0 auto;
-    margin: 8px;
-    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
-}
-
-.about-us-img .span3 {
-    background-image: url("./images/historia.png");
-    margin: 0 auto;
-    background-position: 0px;
-    margin: 8px;
-    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
-}
-
-.about-us-img span {
-    display: inline-block;
-    width: 260px;
-    height: 400px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-repeat: no-repeat;
-    margin-right: 40px;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.about-us-img span:hover {
-    box-shadow: 0 0 12px 0 rgba(110, 110, 110, 0.411);
-}
-
-.about-us-img p {
-    padding-top: 10px;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-@media (max-width: 850px) {
-    .about-us-img span {
-        width: 180px;
-        height: 280px;
-    }
-}
-
-
 /*SECCION HAYAO*/
 
 .section_creator {
     margin: 0 auto;
-    margin-top: 100px;
-    margin-bottom: 100px;
-    width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 430px;
     text-align: center;
 }
 
 .section_creator-container {
     margin: 0 auto;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
 }
 
 .section_creator-container img {
