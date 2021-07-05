@@ -1,10 +1,4 @@
-import { example } from './data.js';
-// import data from './data/lol/lol.js';
 import data from './data/ghibli/ghibli.js';
-// import data from './data/rickandmorty/rickandmorty.js';
-
-
-
 
 /*POSTER DE PELÍCULA Y CONTENEDOR DE INFORMACIÓN ✌*/
 
@@ -50,41 +44,35 @@ data.films.forEach((info) => {
   `
     root.appendChild(movieInfo);
 
-
 });
 
-
-
-
-
 const posters = document.querySelectorAll('.poster');
-const hiddenInput = document.querySelectorAll('input');
 const movieCross = document.querySelectorAll('.movie-cross');
- 
+
 posters.forEach(poster => {
-poster.addEventListener('click', (e) => {
+    poster.addEventListener('click', (e) => {
         // console.log(e.currentTarget);
         // console.log(e.currentTarget.childNodes[1]); //todo input
         // console.log(e.currentTarget.childNodes[1].value); // solo valor del input
-           let valor = e.currentTarget.childNodes[1].value;
-           let infoContainer = document.getElementById('div_info-container_' + valor);
-           infoContainer.style.display = 'inline';
+        let valor = e.currentTarget.childNodes[1].value;
+        let infoContainer = document.getElementById('div_info-container_' + valor);
+        infoContainer.style.display = 'inline';
     });
 });
 
 
 movieCross.forEach(cross => {
     cross.addEventListener('click', (e) => {
-            // console.log(e.currentTarget);
-            // console.log(e.currentTarget.childNodes);
-            // console.log(e.currentTarget.childNodes[5]);
-           // console.log(e.currentTarget.childNodes[5].value);
-            let valor = e.currentTarget.childNodes[5].value;
-            let infoContainer = document.getElementById('div_info-container_' + valor);
-            infoContainer.style.display = 'none';
-        });
+        // console.log(e.currentTarget);
+        // console.log(e.currentTarget.childNodes);
+        // console.log(e.currentTarget.childNodes[5]);
+        // console.log(e.currentTarget.childNodes[5].value);
+        let valor = e.currentTarget.childNodes[5].value;
+        let infoContainer = document.getElementById('div_info-container_' + valor);
+        infoContainer.style.display = 'none';
     });
-    
+});
+
 /*
 poster.addEventListener('click', () => {
     let valor_id = poster.childNodes[0];
@@ -93,5 +81,3 @@ poster.addEventListener('click', () => {
     infoContainer.style.display = 'inline';
 });
 */
-
-
