@@ -34,7 +34,7 @@ body {
 }
 
 
-/* Header */
+/* HEADER */
 
 header {
     width: 100%;
@@ -100,6 +100,9 @@ nav>a:hover {
     background-color: var(--header-color);
     cursor: pointer;
     top: 60%;
+}
+.section_cover-page a:hover {
+    background-color: black;
 }
 
 @media (max-width: 800px) {
@@ -195,5 +198,164 @@ select {
 }
 
 
-/*SECCION DE PELICULAS EN CARDS*/
+/*POSTERS EN CARDS*/
 
+.section_movie-info {
+    margin: 0 auto;
+}
+
+#root {
+    /*centrar todo el contenedor*/
+    margin: 0 auto;
+    /*alineación horizontal*/
+    align-items: center;
+    /*centrar dentro del container*/
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    /*espacio entre cada poster*/
+    grid-gap: 20px;
+}
+
+@media(max-width:890px) {
+    #root {
+        width: 800px;
+    }
+}
+
+@media(max-width:790px) {
+    #root {
+        width: 600px;
+    }
+}
+
+@media(max-width:690px) {
+    #root {
+        width: 400px;
+    }
+}
+@media(max-width:460px) {
+    #root {
+        width: 300px;
+    }
+}
+
+.div_poster-container span {
+    position: absolute;
+    background-color: #D87DE0;
+    font-weight: bold;
+    padding: 3px 8px 3px 8px;
+    border-radius: 15px;
+    bottom: 16px;
+    left: 10px;
+}
+
+.div_poster-container figure {
+    position: relative;
+    cursor: pointer;
+    margin: 0;
+}
+
+.div_poster-container figure img {
+    width: 180px;
+    /*Agregue yvc*/
+    border-radius: 16px;
+}
+
+.div_poster-container figure img:hover {
+    box-shadow: 16px 15px 12px -10px rgba(0, 0, 0, 0.38);
+}
+
+
+/*CONTENEDOR DE INFORMACION*/
+
+.div_info-container {
+    /*Mejor una clase yvc*/
+    position: absolute;
+    /*p: 20px;*/
+    width: 300px;
+    height: auto;
+    padding: 8px;
+    background: rgba(0, 0, 14, 0.86);
+    border-radius: 16px;
+    /*Para que aparezca sobre todos los posters*/
+    z-index: 1;
+}
+@media(max-width:1022px) {
+    .div_info-container {
+      width: 260px;
+    }
+  }
+  @media(max-width:905px) {
+    .div_info-container {
+      width: 230px;
+    }
+  }
+
+.movie-info {
+    font-size: 12px;
+    color: white;
+    border-radius: 30px;
+}
+
+.movie-info h2 {
+    margin: 0px;
+    font-size: 16px;
+}
+
+.movie-info #cross {
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+
+.movie-info .movie-cross {
+    display: flex;
+}
+
+.movie-info .movie-cross h2 {
+    width: 250px;
+    margin-right: 30px;
+}
+
+.movie-info .score-year {
+    display: flex;
+    margin: 0px;
+    align-items: center;
+    height: 18px;
+}
+
+.movie-info .score-year p {
+    margin-right: 50px;
+}
+
+.movie-info span .score {
+    color: #D87DE0;
+}
+
+.movie-info .description {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    line-height: 15px;
+}
+
+.movie-info .director {
+    margin-top: 3px;
+    margin-bottom: 8px;
+}
+
+.movie-info .producer {
+    margin-top: 2px;
+    margin-bottom: 8px;
+}
+
+.movie-info a {
+    margin-right: 3px;
+    text-decoration: none;
+    color: #D87DE0;
+}
+
+.movie-info a:hover {
+    font-weight: bold;
+}
