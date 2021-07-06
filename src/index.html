@@ -2,7 +2,7 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Studio Ghibli</title>
@@ -17,13 +17,13 @@
     <!--PANTALLA PRINCIPAL-->
     <header>
         <nav>
-            <a href="#creaciones">Creaciones</a>
-            <a href="#">Vídeos</a>
+            <a href="#creaciones">Films</a>
+            <a href="#">Videos</a>
             <a href="#">Merchandising</a>
         </nav>
         <section class="section_cover-page">
             <img src="./images/ghibli-white.svg" alt="logo de studio ghibli">
-            <a href="#creaciones">Nuestras Creaciones</a>
+            <a href="#creaciones">Our creations</a>
         </section>
         <div class="wave" style="height: 150px; overflow: hidden;">
             <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
@@ -35,19 +35,19 @@
     <main>
 
 
-     <!--SECCION HAYAO-->
-    <section class="section_creator">
-        <div class="section_creator-container">
-            <img class="img-hayao" src="./images/hayao.png" alt="">
-            <p>“I do believe in the power of story. I believe that stories have an important role to play in the formation of human beings, that they can stimulate, amaze and inspire their listeners.”</p><br>
-            <p class="p_name">Hayao Miyazaki </p>
-        </div>
-    </section>
+        <!--SECCION HAYAO-->
+        <section class="section_creator">
+            <div class="section_creator-container">
+                <img class="img-hayao" src="./images/hayao.png" alt="">
+                <p>“I do believe in the power of story. I believe that stories have an important role to play in the formation of human beings, that they can stimulate, amaze and inspire their listeners.”</p><br>
+                <p class="p_name">Hayao Miyazaki </p>
+            </div>
+        </section>
 
 
         <!--SECCION OPCIONES-->
         <section class="section_select-option">
-            <h2 id="creaciones">Creaciones</h2><br>
+            <h2 id="creaciones">Films</h2><br>
 
             <div class="div_select-container">
             <select class="sort-items">
@@ -61,18 +61,35 @@
                 <option value="mejor valoradas">Mejor Valoradas</option>
                 <option value="top 5">Top 5 más populares</option>
             </select>
-        
-        </div>
-    </section>
 
-      <!--SECCION DE PELICULAS EN CARDS-->
-      <section class="section_movie-info">
-        <!--Contenedor que contiene el div con la imagen y el div de información-->
-        <div id="root"></div>
-    </section>
+            </div>
+        </section>
+
+        <!--SECCION DE PELICULAS EN CARDS-->
+        <section class="section_movie-info">
+            <!--Contenedor que contiene el div con la imagen y el div de información-->
+            <div id="root"></div>
+        </section>
 
     </main>
+    <!--SECCIÓN FOOTER-->
+    <footer>
+        <div class="footer-content">
+            <img src="https://i.ibb.co/h2qPQLf/logooficial.png">
+            <ul class="socials">
+                <li><a href="https://www.facebook.com/GhibliUSA"><i class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/GhibliUSA/status/1354467806906118144"><i class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/GhibliUSA/"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+        <div class="footer-bottom">
+            <p><span>copyright &copy;2021 Data Lovers - Project.</span> Created by Pierina Montalva & Nadia Chayna</p>
+        </div>
+    </footer>
+
     <script src="main.js" type="module"></script>
+
+
 
 </body>
 
