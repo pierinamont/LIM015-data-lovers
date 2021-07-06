@@ -48,17 +48,29 @@ data.films.forEach((info) => {
 
 const posters = document.querySelectorAll('.poster');
 const movieCross = document.querySelectorAll('.movie-cross');
-
+let numeroDeClick = 0;
 posters.forEach(poster => {
     poster.addEventListener('click', (e) => {
-        // console.log(e.currentTarget);
+        numeroDeClick++
+        if (numeroDeClick != 1) {
+            let id_anterior = localStorage.getItem('id_actual');
+            document.getElementById(id_anterior).style.display = 'none';
+        }
+
+        //console.log(e.target);
+        //console.log(e.currentTarget.childNodes[1]);
         // console.log(e.currentTarget.childNodes[1]); //todo input
         // console.log(e.currentTarget.childNodes[1].value); // solo valor del input
         let valor = e.currentTarget.childNodes[1].value;
         let infoContainer = document.getElementById('div_info-container_' + valor);
         infoContainer.style.display = 'inline';
+
+        localStorage.setItem('id_actual', 'div_info-container_' + valor);
+
+
     });
 });
+
 
 
 movieCross.forEach(cross => {
@@ -72,6 +84,10 @@ movieCross.forEach(cross => {
         infoContainer.style.display = 'none';
     });
 });
+
+document.querySelector(".sort-items").addEventListener("change", (e) => {
+    //console.log("aqui", e, e.currentTarget.value)
+})
 
 /*
 poster.addEventListener('click', () => {
