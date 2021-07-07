@@ -33,8 +33,6 @@
     </header>
 
     <main>
-
-
         <!--SECCION HAYAO-->
         <section class="section_creator">
             <div class="section_creator-container">
@@ -44,24 +42,25 @@
             </div>
         </section>
 
-
         <!--SECCION OPCIONES-->
         <section class="section_select-option">
             <h2 id="creaciones">Films</h2><br>
 
             <div class="div_select-container">
-            <select class="sort-items">
-                <option selected disabled>Ordenar según</option>
-                <option value="puntuación">Puntuación</option>
-                <option value="animaciones recientes">Animaciones más recientes</option>
-            </select>
+                <select class="sort-items">
+                    <option selected disabled>Sort by</option>
+                    <option value="score">Score</option>
+                    <option value="year-of-release">year of release</option>
+                    <option value="latest-animations">Latest animations</option>
+                </select>
+    
+                <select class="filter-items">
+                    <option selected disabled>Watch</option>
+                    <option value="top5">Top 5</option>
+                    <option value="directed-by-hayao">Directed by Hayao Miyazaki</option>
+                </select>
 
-            <select class="filter-items">
-                <option selected disabled>Filtrar películas</option>
-                <option value="mejor valoradas">Mejor Valoradas</option>
-                <option value="top 5">Top 5 más populares</option>
-            </select>
-
+                <input type="text" name="" id="search" placeholder="Search">
             </div>
         </section>
 
@@ -72,10 +71,12 @@
         </section>
 
     </main>
+
     <!--SECCIÓN FOOTER-->
     <footer>
         <div class="footer-content">
-            <img src="https://i.ibb.co/h2qPQLf/logooficial.png">
+            <img src="./images/animacion-blanco.png">
+            <!--<img src="https://i.ibb.co/h2qPQLf/logooficial.png">-->
             <ul class="socials">
                 <li><a href="https://www.facebook.com/GhibliUSA"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="https://twitter.com/GhibliUSA/status/1354467806906118144"><i class="fa fa-twitter"></i></a></li>
@@ -83,7 +84,10 @@
             </ul>
         </div>
         <div class="footer-bottom">
-            <p><span>copyright &copy;2021 Data Lovers - Project.</span> Created by Pierina Montalva & Nadia Chayna</p>
+            <p>
+            <span>copyright &copy;2021 Data Lovers - Project for Laboratoria.</span>
+            Created by Pierina Montalva & Nadia Chayna
+            </p>
         </div>
     </footer>
 
