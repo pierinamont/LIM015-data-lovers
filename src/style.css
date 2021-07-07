@@ -150,8 +150,8 @@ nav>a:hover {
 
 .section_creator {
     margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 90px;
+    margin-top: 80px;
+    margin-bottom: 120px;
     width: 430px;
     text-align: center;
 }
@@ -167,7 +167,7 @@ nav>a:hover {
     height: auto;
     margin-bottom: 20px;
     border-radius: 100px;
-    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.767);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.63);
 }
 
 .section_creator-container .p_name {
@@ -185,8 +185,7 @@ nav>a:hover {
 }
 
 .section_select-option h2 {
-    margin-left: 270px;
-    margin-right: 270px;
+    padding-left: 70px;
     font-size: 3.5rem;
     font-family: Castoro;
     font-weight: bold;
@@ -195,11 +194,18 @@ nav>a:hover {
 .div_select-container {
     margin-left: 270px;
     margin-right: 270px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin-bottom: 60px;
+    grid-gap: 25px;
+    justify-content: space-around;
+   /* justify-content: center;*/
+    margin-bottom: 100px;
     margin-top: 30px;
+}
+
+.div_select-container select:hover {
+    box-shadow: 0 0 10px 0 rgba(131, 131, 131, 0.63);
 }
 
 select {
@@ -214,9 +220,22 @@ select {
     padding-left: 5px;
     cursor: pointer;
     margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
 }
 
-
+.div_select-container #search {
+    width: 180px;
+    max-width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+.div_select-container #search::placeholder {
+    font-size: 1.5rem;
+    color: #666666;
+    padding-left: 10px;
+    font-family: 'Montserrat', sans-serif;
+}
 /*POSTERS EN CARDS*/
 
 .section_movie-info {
@@ -280,7 +299,6 @@ select {
 
 .div_poster-container figure img {
     width: 180px;
-    /*Agregue yvc*/
     border-radius: 16px;
 }
 
@@ -292,9 +310,7 @@ select {
 /*CONTENEDOR DE INFORMACION*/
 
 .div_info-container {
-    /*Mejor una clase yvc*/
     position: absolute;
-    /*p: 20px;*/
     width: 300px;
     height: auto;
     padding: 8px;
@@ -387,14 +403,12 @@ select {
 /*SECCIÓN FOOTER*/
 
 footer {
-    /*position: absolute;*/
     bottom: 0;
     left: 0;
     right: 0;
     background: #010114fd;
     height: auto;
     width: 100%;
-    font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;
 }
@@ -406,7 +420,9 @@ footer {
     flex-direction: column;
     text-align: center;
 }
-
+.footer-content img {
+    height: 130px;
+}
 .socials {
     list-style: none;
     display: flex;

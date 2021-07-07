@@ -89,11 +89,3 @@ document.querySelector(".sort-items").addEventListener("change", (e) => {
     //console.log("aqui", e, e.currentTarget.value)
 })
 
-/*
-poster.addEventListener('click', () => {
-    let valor_id = poster.childNodes[0];
-    console.log('id:' + valor_id);
-    let infoContainer = document.getElementById('div_info-container_' + valor_id);
-    infoContainer.style.display = 'inline';
-});
-*/
