@@ -19,6 +19,20 @@ body {
     background-color: var(--body-color);
 }
 
+body::-webkit-scrollbar {
+    width: 18px;
+    background: #aed3e4;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #598ba1d5;
+    border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #ab94bd;
+}
+
 .titulo {
     color: var(--header-color);
     font-family: 'Castoro', serif;
@@ -39,7 +53,7 @@ body {
 /* HEADER */
 
 header {
-    width: 100vw;
+    width: 100%;
     height: 720px;
     background: #bc4e9c;
     /* fallback for old browsers */
@@ -56,7 +70,7 @@ header {
 nav {
     text-align: right;
     padding: 30px 50px 0 0;
-    background-color: black;
+    background-color: #010114fd;
     height: 70px;
 }
 
@@ -145,6 +159,7 @@ nav>a:hover {
 .section_creator-container {
     margin: 0 auto;
     font-size: 1.5rem;
+    line-height: 1.5;
 }
 
 .section_creator-container img {
@@ -393,8 +408,8 @@ footer {
     right: 0;
     background: #010114fd;
     height: auto;
-    width: 100vw;
-    padding-top: 30px;
+    width: 100%;
+    padding-top: 40px;
     color: #fff;
 }
 
@@ -413,11 +428,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0 2rem 0;
+    margin: 3rem 0 2rem 0;
 }
 
 .socials li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .socials a {
@@ -426,10 +441,8 @@ footer {
 }
 
 .socials a i {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     transition: color .3s ease;
-    width: 20px;
-    height: auto;
 }
 
 .socials a:hover i {
@@ -438,7 +451,7 @@ footer {
 
 .footer-bottom {
     background: rgb(42, 39, 65);
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     text-align: center;
 }
