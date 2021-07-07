@@ -19,6 +19,20 @@ body {
     background-color: var(--body-color);
 }
 
+body::-webkit-scrollbar {
+    width: 18px;
+    background: #aed3e4;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #598ba1d5;
+    border-radius: 12px;
+}
+
+body::-webkit-scrollbar-thumb:active {
+    background-color: #ab94bd;
+}
+
 .titulo {
     color: var(--header-color);
     font-family: 'Castoro', serif;
@@ -56,7 +70,7 @@ header {
 nav {
     text-align: right;
     padding: 30px 50px 0 0;
-    background-color: black;
+    background-color: #010114fd;
     height: 70px;
 }
 
@@ -137,7 +151,7 @@ nav>a:hover {
 .section_creator {
     margin: 0 auto;
     margin-top: 50px;
-    margin-bottom: 50px;
+    margin-bottom: 90px;
     width: 430px;
     text-align: center;
 }
@@ -145,6 +159,7 @@ nav>a:hover {
 .section_creator-container {
     margin: 0 auto;
     font-size: 1.5rem;
+    line-height: 1.5;
 }
 
 .section_creator-container img {
@@ -183,8 +198,8 @@ nav>a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-bottom: 100px;
-    margin-top: 50px;
+    margin-bottom: 60px;
+    margin-top: 30px;
 }
 
 select {
@@ -206,7 +221,7 @@ select {
 
 .section_movie-info {
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 150px;
 }
 
 #root {
@@ -378,7 +393,7 @@ footer {
     right: 0;
     background: #010114fd;
     height: auto;
-    width: 100vw;
+    width: 100%;
     font-family: "Open Sans";
     padding-top: 40px;
     color: #fff;
@@ -397,11 +412,11 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 2rem 0 2rem 0;
+    margin: 3rem 0 2rem 0;
 }
 
 .socials li {
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 .socials a {
@@ -410,10 +425,8 @@ footer {
 }
 
 .socials a i {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     transition: color .3s ease;
-    width: 20px;
-    height: auto;
 }
 
 .socials a:hover i {
@@ -422,7 +435,7 @@ footer {
 
 .footer-bottom {
     background: rgb(42, 39, 65);
-    width: 100vw;
+    width: 100%;
     padding: 20px 0;
     text-align: center;
 }
