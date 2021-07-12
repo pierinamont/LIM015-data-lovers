@@ -1,53 +1,31 @@
-import data from './data/ghibli/ghibli.js';
+//import data from './data/ghibli/ghibli.js';
 
-/*POSTER DE PELÍCULA Y CONTENEDOR DE INFORMACIÓN ✌*/
+// * as all => Nos permite traer todas las funciones de data.js, sin necesidad de escribirlas una por una
+import * as all from './data.js';
+
+// llamar función que crea la estructura de la seccion de pelis (permite mostrar posters con toda su info)
+all.functionMoviesSection();
+
 
 //Llamar el elemento del html en donde irá nuestro nuevo elemento
-const root = document.getElementById('root');
-
-//Crear nuevo elemento
-data.films.forEach((info) => {
-    const movieInfo = document.createElement('div');
-    movieInfo.className = "movie-info"
-
-    movieInfo.innerHTML = `
-  <div>
-  <!--contenedor del poster y su año-->
-    <div class="div_poster-container">
-      <figure class="poster">
-        <input type="text" hidden value="${info.id}" id="${info.id}"/>
-        <span class="year">${info.release_date}</span>
-        <img src="${info.poster}"></img>
-      </figure>
-    </div>
-    
-    <!--contenedor de datos de la película--> 
-    <div id="div_info-container_${info.id}" class="div_info-container" style="display:none">
-       <span class="movie-cross">
-          <h2>${info.title}</h2>
-          <img id="cross" src="https://i.postimg.cc/x8dGZhqx/remove.png">
-          <input type="text" hidden value="${info.id}"/>
-          </img>
-       </span>
-       <span class="score-year">
-         <p class="score">Score: ${info.rt_score}</p>
-         <p>${info.release_date}</p>
-       </span>
-       <p class="description">${info.description}</p>
-       <p class="director">Director: ${info.director}</p>
-       <p class="producer">Producer: ${info.producer}</p>
-       <a href="#">People</a>
-       <a href="#">Vehicles</a>
-       <a href="#">Locations</a>
-    </div>
-   </div>
-  `
-    root.appendChild(movieInfo);
-
-});
-
+//const root = document.getElementById('root');
+// llamar contenedores figure => class='poster'
 const posters = document.querySelectorAll('.poster');
+
+// llamar contenedores span => class='movie-cross'
 const movieCross = document.querySelectorAll('.movie-cross');
+
+// llamar etiqueta selector para ordenar data => class='sort-items'
+const sortItems = document.querySelector('.sort-items');
+
+// llamar etiqueta selector para filtrar data => class='filter-items'
+const filterItems = document.querySelector('.filter-items');
+
+// llamar div creado que contiene la seccion de pelis data => class='movie-info'
+//const movieInfo = document.querySelector('.movie-info');
+
+
+// EVENTO PARA MOSTRAR CONTENEDORES CON LA INFORMACION DE LAS PELICULAS
 let numeroDeClick = 0;
 posters.forEach(poster => {
     poster.addEventListener('click', (e) => {
@@ -61,10 +39,10 @@ posters.forEach(poster => {
         infoContainer.style.display = 'inline';
 
         localStorage.setItem('id_actual', 'div_info-container_' + valor);
-
     });
 });
 
+// EVENTO PARA CERRAR CONTENEDOR CON LA INFORMACION AL HACER CLICK EN X
 movieCross.forEach(cross => {
     cross.addEventListener('click', (e) => {
         let valor = e.currentTarget.childNodes[5].value;
@@ -73,5 +51,24 @@ movieCross.forEach(cross => {
     });
 });
 
-//const dataFilms = [...data.films]
+// EVENTO EN ETIQUETA SELECT PARA ORDENAR DATA
+sortItems.addEventListener('change', (e) => {
+    const sortItemsValue = e.currentTarget.value;
+    console.log(sortItemsValue);
+    // Llama función 'sortfunction' de data.js 
+    all.sortfunction(sortItemsValue);
 
+    // if(sortItemsValue === 'score') {
+    //   movieInfo.innerHTML = sortfunction(sortItemsValue).join('');
+    // }
+});
+
+// EVENTO EN ETIQUETA SELECT PARA FILTRAR DATA
+filterItems.addEventListener('change', (e) => {
+    // obtener valor de etiqueta select
+    let filterItemsValue = e.currentTarget.value;
+    console.log(filterItemsValue);
+
+    // Llama función 'filterfunction' de data.js 
+    all.filterfunction(filterItemsValue);
+});

@@ -1,23 +1,33 @@
-import { example, anotherExample } from '../src/data.js';
+//import { example, anotherExample } from '../src/data.js';
+import * as all from '../src/data.js';
 
+describe('functionMoviesSection', () => {
+    it('is a function', () => {
+        expect(typeof all.functionMoviesSection).toBe('function');
+    });
 
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
-  });
+    // it('returns `example`', () => {
+    //   expect(example()).toBe('example');
+    // });
 });
 
 
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
+describe('sortfunction', () => {
+    it('is a function', () => {
+        expect(typeof all.sortfunction).toBe('function');
+    });
 
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
-  });
+    // it('returns `anotherExample`', () => {
+    //   expect(anotherExample()).toBe('OMG');
+    // });
+});
+
+describe('filterfunction', () => {
+    it('is a function', () => {
+        expect(typeof all.filterfunction).toBe('function');
+    });
+
+    // it('returns `anotherExample`', () => {
+    //   expect(anotherExample()).toBe('OMG');
+    // });
 });
