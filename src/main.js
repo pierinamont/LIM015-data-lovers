@@ -1,29 +1,14 @@
-//import data from './data/ghibli/ghibli.js';
-
-// * as all => Nos permite traer todas las funciones de data.js, sin necesidad de escribirlas una por una
+import data from './data/ghibli/ghibli.js';
 import * as all from './data.js';
 
-// llamar función que crea la estructura de la seccion de pelis (permite mostrar posters con toda su info)
-all.functionMoviesSection();
+// llamar función que crea la estructura de la seccion de pelis 
+all.functionMoviesSection(data.films);
 
-
-//Llamar el elemento del html en donde irá nuestro nuevo elemento
-//const root = document.getElementById('root');
-// llamar contenedores figure => class='poster'
+const root = document.getElementById('root');
 const posters = document.querySelectorAll('.poster');
-
-// llamar contenedores span => class='movie-cross'
 const movieCross = document.querySelectorAll('.movie-cross');
-
-// llamar etiqueta selector para ordenar data => class='sort-items'
 const sortItems = document.querySelector('.sort-items');
-
-// llamar etiqueta selector para filtrar data => class='filter-items'
 const filterItems = document.querySelector('.filter-items');
-
-// llamar div creado que contiene la seccion de pelis data => class='movie-info'
-//const movieInfo = document.querySelector('.movie-info');
-
 
 // EVENTO PARA MOSTRAR CONTENEDORES CON LA INFORMACION DE LAS PELICULAS
 let numeroDeClick = 0;
@@ -53,22 +38,19 @@ movieCross.forEach(cross => {
 
 // EVENTO EN ETIQUETA SELECT PARA ORDENAR DATA
 sortItems.addEventListener('change', (e) => {
-    const sortItemsValue = e.currentTarget.value;
-    console.log(sortItemsValue);
-    // Llama función 'sortfunction' de data.js 
-    all.sortfunction(sortItemsValue);
-
-    // if(sortItemsValue === 'score') {
-    //   movieInfo.innerHTML = sortfunction(sortItemsValue).join('');
-    // }
+  const sortItemsValue = e.currentTarget.value;
+  console.log(sortItemsValue);
+  // Llama función 'sortfunction' de data.js 
+  const sortData = all.sortfunction(sortItemsValue);
+  all.functionMoviesSection(sortData);
 });
 
 // EVENTO EN ETIQUETA SELECT PARA FILTRAR DATA
 filterItems.addEventListener('change', (e) => {
-    // obtener valor de etiqueta select
-    let filterItemsValue = e.currentTarget.value;
-    console.log(filterItemsValue);
-
-    // Llama función 'filterfunction' de data.js 
-    all.filterfunction(filterItemsValue);
+  // obtener valor de etiqueta select
+  let filterItemsValue = e.currentTarget.value;
+  console.log(filterItemsValue);
+  
+  // Llama función 'filterfunction' de data.js 
+  all.filterfunction(filterItemsValue);
 });
