@@ -199,7 +199,7 @@ nav>a:hover {
     flex-wrap: wrap;
     grid-gap: 25px;
     justify-content: space-around;
-   /* justify-content: center;*/
+    /* justify-content: center;*/
     margin-bottom: 100px;
     margin-top: 30px;
 }
@@ -230,12 +230,15 @@ select {
     border-radius: 10px;
     border: none;
 }
+
 .div_select-container #search::placeholder {
     font-size: 1.5rem;
     color: #666666;
     padding-left: 10px;
     font-family: 'Montserrat', sans-serif;
 }
+
+
 /*POSTERS EN CARDS*/
 
 .section_movie-info {
@@ -420,9 +423,11 @@ footer {
     flex-direction: column;
     text-align: center;
 }
+
 .footer-content img {
     height: 130px;
 }
+
 .socials {
     list-style: none;
     display: flex;
