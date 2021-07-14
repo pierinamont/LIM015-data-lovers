@@ -389,15 +389,16 @@ select {
     margin-bottom: 8px;
 }
 
-.movie-info a {
+.movie-info .moreinfo {
     margin-right: 3px;
-    text-decoration: none;
     color: #D87DE0;
+    cursor: pointer;
 }
 
-.movie-info a:hover {
+.movie-info .moreinfo:hover {
     font-weight: bold;
 }
+
 
 
 /*SECCIÓN FOOTER*/
