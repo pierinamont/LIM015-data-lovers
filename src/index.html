@@ -45,7 +45,7 @@
         </section>
 
         <!--SECCION OPCIONES-->
-        <section class="section_select-option">
+        <section class="section_select-option" id="section_select-option">
             <h2 id="creaciones">Films</h2><br>
 
             <div class="div_select-container">
@@ -55,7 +55,7 @@
                     <option value="year-of-release">year of release</option>
                     <option value="latest-animations">Latest animations</option>
                 </select>
-
+    
                 <select class="filter-items">
                     <option selected disabled>Watch</option>
                     <option value="top5">Top 5</option>
@@ -69,9 +69,27 @@
         </section>
 
         <!--SECCION DE PELICULAS EN CARDS-->
-        <section class="section_movie-info">
-            <!--Contenedor que contiene el div con la imagen y el div de información-->
+        <section class="section_movie-info" id="section_movie-info">
+            <!--Contenedor que contiene los divs con los posters y  la información-->
             <div id="root"></div>
+        </section>
+        
+         <!--SECCION DE PERSONAJES-->
+        <section class="section-people" id="section-people" style="display: none">
+            <h2>People</h2><br>
+            <div id="people"></div>
+        </section>
+
+        <!--SECCION DE LOCACIONES-->
+        <section class="section-location" style="display: none">
+            <h2>Location</h2><br>
+            <div id="location"></div>
+        </section>
+
+        <!--SECCION DE VEHICULOS-->
+        <section class="section-vehicles" style="display: none">
+            <h2>Vehicles</h2><br>
+            <div id="vehicles"></div>
         </section>
 
     </main>
@@ -89,7 +107,8 @@
         </div>
         <div class="footer-bottom">
             <p>
-                <span>copyright &copy;2021 Data Lovers - Project for Laboratoria.</span> Created by Pierina Montalva &lt Nadia Chayna
+            <span>copyright &copy;2021 Data Lovers - Project for Laboratoria.</span>
+            Created by Pierina Montalva &lt Nadia Chayna
             </p>
         </div>
     </footer>

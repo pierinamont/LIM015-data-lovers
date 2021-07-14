@@ -6,7 +6,7 @@ const root = document.getElementById('root');
 const sortItems = document.querySelector('.sort-items');
 const filterItems = document.querySelector('.filter-items');
 
-// EXPORTAR FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PELIS, CON SU POSTER E INFORMACIÓN
+// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PELIS, CON SU POSTER E INFORMACIÓN
 const functionMoviesSection = (arrayData) => {
     root.innerHTML = '';
     arrayData.forEach((info) => {
@@ -45,7 +45,6 @@ const functionMoviesSection = (arrayData) => {
           root.appendChild(movieInfo);
     });
 }
-
 functionMoviesSection(data.films);
 
 // Elementos del innerHTML
@@ -72,7 +71,7 @@ const functionShowInfo = () => {
         });
     });
 }
-functionShowInfo(data.films);
+functionShowInfo();
 
 // EVENTO PARA CERRAR CONTENEDOR CON LA INFORMACION AL HACER CLICK EN X
 const functionCloseInfo = () => {
@@ -97,14 +96,14 @@ sortItems.addEventListener('change', (e) => {4
   functionMoviesSection(sortData);
 
   // Funcion para mostrar y ocultar info
-  functionShowInfo(posters);
-  functionCloseInfo(posters)
+  functionShowInfo();
+  functionCloseInfo();
 });
 
 // EVENTO EN ETIQUETA SELECT PARA FILTRAR DATA
 filterItems.addEventListener('change', (e) => {
   // obtener valor de etiqueta select
-  let filterItemsValue = e.currentTarget.value;
+  const filterItemsValue = e.currentTarget.value;
   console.log(filterItemsValue);
 
   // Llama función 'filterfunction'
@@ -112,6 +111,59 @@ filterItems.addEventListener('change', (e) => {
   functionMoviesSection(filterData);
 
   // Funcion para mostrar y ocultar info
-  functionShowInfo(posters);
-  functionCloseInfo(posters)
+  functionShowInfo();
+  functionCloseInfo();
 });
+
+
+
+const people = document.getElementById('people')
+
+// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PEOPLE
+const functionPeopleSection = (arrayData) => {
+  arrayData.forEach((p) => {
+    const peopleInfo = document.createElement('div');
+    peopleInfo.className = 'people-info';
+    people.innerHTML = `
+      <div>
+      <!--contenedor del poster y su año-->
+        <div class="div_poster-container">
+          <figure class="poster">
+            <input type="text" hidden value="${p.id}" id="${p.id}"/>
+            <span class="year">${p.name}</span>
+            <img src="${p.img}"></img>
+          </figure>
+        </div>`
+
+        people.appendChild(peopleInfo);
+  });
+}
+functionPeopleSection(data.films);
+
+
+
+
+const moreInfo = document.querySelectorAll('.moreinfo');
+const sectionMovieInfo = document.getElementById('section_movie-info');
+const sectionSelectOption = document.getElementById('section_select-option')
+const sectionPeople = document.getElementById('section-people');
+
+// SECCIÓN PERSONAJES 
+const functionShowMoreInfo = () => {
+
+  moreInfo.forEach(info => {
+    info.addEventListener('click', () => {
+      
+      // Ocultar seccion películas
+      sectionMovieInfo.style.display = 'none';
+      sectionSelectOption.style.display = 'none';
+
+      // Mostrar personajes
+      sectionPeople.style.display = 'inline';
+
+    });
+
+  });
+}
+functionShowMoreInfo();
+
