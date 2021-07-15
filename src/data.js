@@ -1,6 +1,7 @@
 import data from './data/ghibli/ghibli.js';
 
 // EXPORTAR FUNCIÓN PARA ORDENAR DATA
+
 export const sortfunction = (sortItemsValue) => {
     switch (sortItemsValue) {
     case 'score': {
@@ -61,4 +62,5 @@ export const filterfunction = (filterItemsValue) => {
   }
   }
 };
+
 
