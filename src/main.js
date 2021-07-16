@@ -1,12 +1,9 @@
 import data from './data/ghibli/ghibli.js';
 import * as all from './data.js';
 
-// Elementos del html
+// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PELIS, CON SU POSTER E INFORMACIÓN //////////
 const root = document.getElementById('root');
-const sortItems = document.querySelector('.sort-items');
-const filterItems = document.querySelector('.filter-items');
 
-// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PELIS, CON SU POSTER E INFORMACIÓN
 const functionMoviesSection = (arrayData) => {
     root.innerHTML = '';
     arrayData.forEach((info) => {
@@ -39,7 +36,7 @@ const functionMoviesSection = (arrayData) => {
            <p class="description">${info.description}</p>
            <p class="director">Director: ${info.director}</p>
            <p class="producer">Producer: ${info.producer}</p>
-           <p class="moreinfo" id="moreinfo_${info.title}">Ver más</p>
+           <p class="moreinfo" id="${info.title}">Ver más</p>
         </div>
        </div>
       `
@@ -49,11 +46,9 @@ const functionMoviesSection = (arrayData) => {
 functionMoviesSection(data.films);
 
 
-// Elementos del innerHTML
+// EVENTO PARA MOSTRAR CONTENEDORES CON LA INFORMACION DE LAS PELICULAS //////////
 const posters = document.querySelectorAll('.poster');
-const movieCross = document.querySelectorAll('.movie-cross');
 
-// EVENTO PARA MOSTRAR CONTENEDORES CON LA INFORMACION DE LAS PELICULAS
 const functionShowInfo = (info) => {
     let numeroDeClick = 0;
     info.forEach(poster => {
@@ -75,8 +70,9 @@ const functionShowInfo = (info) => {
 }
 functionShowInfo(posters);
 
+// EVENTO PARA CERRAR CONTENEDOR CON LA INFORMACION AL HACER CLICK EN X //////////
+const movieCross = document.querySelectorAll('.movie-cross');
 
-// EVENTO PARA CERRAR CONTENEDOR CON LA INFORMACION AL HACER CLICK EN X
 const functionCloseInfo = (close) => {
     close.forEach(cross => {
         cross.addEventListener('click', (e) => {
@@ -88,71 +84,88 @@ const functionCloseInfo = (close) => {
 }
 functionCloseInfo(movieCross);
 
-
+// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PERSONAJES //////////
 const people = document.getElementById('people')
 
-// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PEOPLE
 const functionPeopleSection = (arrayData) => {
-    //people.innerHTML = '';
-    arrayData.forEach((info) => {
-        const peopleInfo = document.createElement('div');
-        peopleInfo.className = 'people-info';
-        people.innerHTML = `
+    for (let i = 0; i < arrayData.length; i++) {
+        const copyInfo = arrayData[i];
+        console.log(copyInfo); // Objeto con info de la peli
+
+        const arrayPeople = copyInfo.people;
+        console.log(arrayPeople); // Array de los personajes
+
+        arrayPeople.forEach((info) => {
+            //console.log(info.people[0]); // imprime el primer personaje de cada peli
+            //console.log(info.people); // imprime todos los personajes de cada peli
+            //console.log(info);
+            const peopleInfo = document.createElement('div');
+            peopleInfo.className = 'people-info';
+            peopleInfo.innerHTML = `
       <div>
       <!--contenedor del personaje y características-->
         <div class="div_people-container">
-          <input type="text" hidden value="${info.people.id}" id="${info.people.id}"/>
+          <input type="text" hidden value="${info.id}" id="${info.id}"/>
           <figure class="people">
-            <span class="name"> ${info.people.name}</span>
-            <img src=" ${info.people.img}"></img>
+            <span class="name"> ${info.name}</span>
+            <i style="background-image: url(${info.img})"></i>
           </figure>
 
           <div class="container-info">
-            <p><strong>Gender:</strong> ${info.director}</p>
-            <p><strong>Age:</strong> ${info.people.age}</p>
-            <p><strong>Eye color:</strong> ${info.people.eye_color}</p>
-            <p><strong>Hair color:</strong> ${info.people.hair_color}</p>
-            <p><strong>Specie:</strong> ${info.people.specie}</p> 
+            <p><strong>Gender:</strong> ${info.gender}</p>
+            <p><strong>Age:</strong> ${info.age}</p>
+            <p><strong>Eye color:</strong> ${info.eye_color}</p>
+            <p><strong>Hair color:</strong> ${info.hair_color}</p>
+            <p><strong>Specie:</strong> ${info.specie}</p> 
           </div>
         </div>
         `
-        people.appendChild(peopleInfo);
-    });
-};
-functionPeopleSection(data.films);
+            people.appendChild(peopleInfo);
+        });
+    }
+}
+functionPeopleSection(data.films)
 
 
+// EVENTO PARA "VER MAS" //////////
 const moreInfo = document.querySelectorAll('.moreinfo');
 const sectionMovieInfo = document.getElementById('section_movie-info');
 const sectionSelectOption = document.getElementById('section_select-option')
 const sectionPeople = document.getElementById('section-people');
 
-// SECCIÓN PERSONAJES 
 const functionShowMoreInfo = (info) => {
     info.forEach(info => {
         info.addEventListener('click', (e) => {
-            console.log(e.currentTarget.id)
-                // Ocultar seccion películas
+
+            // Ocultar seccion películas
             sectionMovieInfo.style.display = 'none';
             sectionSelectOption.style.display = 'none';
 
             // Mostrar personajes
-            let id = e.currentTarget.id
-            let infoContainer = document.getElementById('moreinfo_' + id);
-            console.log(infoContainer);
-            sectionPeople.style.display = 'inline';
+            sectionPeople.style.display = 'block';
 
-            //functionPeopleSection(e);
-            // console.table(functionPeopleSection);
+            // Titulo de pelicul seleccionada
+            let moviesTitle = e.currentTarget.id;
+
+            // Funcion que selecciona la data de la peli seleccionada
+            const movieSelected = all.selectedData(moviesTitle);
+
+            // Personajes de la peli seleccionada
+            let moviePerson = movieSelected[0].people
+            console.log(moviePerson);
+
+            // Llamar funcion para los personajes de la peli seleccionada
+            functionPeopleSection(moviePerson);
         });
 
     });
 }
 functionShowMoreInfo(moreInfo);
 
-// EVENTO EN ETIQUETA SELECT PARA ORDENAR DATA
+// EVENTO EN ETIQUETA SELECT PARA ORDENAR DATA //////////
+const sortItems = document.querySelector('.sort-items');
+
 sortItems.addEventListener('change', (e) => {
-    4
     // obtener valor de etiqueta select
     const sortItemsValue = e.currentTarget.value;
     console.log(sortItemsValue);
@@ -169,9 +182,12 @@ sortItems.addEventListener('change', (e) => {
     functionShowInfo(newPosters);
     functionCloseInfo(newMovieCross);
     functionShowMoreInfo(newMoreInfo);
+    functionPeopleSection(newMoreInfo);
 });
 
-// EVENTO EN ETIQUETA SELECT PARA FILTRAR DATA
+// EVENTO EN ETIQUETA SELECT PARA FILTRAR DATA //////////
+const filterItems = document.querySelector('.filter-items');
+
 filterItems.addEventListener('change', (e) => {
     // obtener valor de etiqueta select
     const filterItemsValue = e.currentTarget.value;

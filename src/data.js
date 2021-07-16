@@ -39,8 +39,7 @@ export const filterfunction = (filterItemsValue) => {
             {
                 // Filtrar por top 5
                 const top5 = data.films.filter(top => top.rt_score >= 96)
-
-                //Ordenar top 5
+                    //Ordenar top 5
                 const orderTop5 = top5.sort((a, b) => b.rt_score - a.rt_score)
                 console.table(orderTop5);
                 return orderTop5;
@@ -72,3 +71,9 @@ export const filterfunction = (filterItemsValue) => {
             }
     }
 };
+
+// PELICULA SELECCIONADA
+export const selectedData = (moviesTitle) => {
+    console.log(moviesTitle);
+    return data.films.filter(movies => movies.title === moviesTitle);
+}
