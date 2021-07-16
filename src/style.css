@@ -286,12 +286,23 @@ select {
 
 .div_poster-container span {
     position: absolute;
-    background-color: #D87DE0;
+    background-color: #3481d3;
     font-weight: bold;
     padding: 3px 8px 3px 8px;
     border-radius: 15px;
     bottom: 16px;
     left: 10px;
+}
+
+.div_poster-container i {
+    position: absolute;
+    background-color: #d675df;
+    font-weight: bold;
+    font-style: normal;
+    padding: 3px 8px 3px 8px;
+    border-radius: 15px;
+    bottom: 16px;
+    right: 10px;
 }
 
 .div_poster-container figure {
@@ -479,7 +490,47 @@ footer {
 
 .section-people {
     margin: 0 auto;
+    margin-bottom: 150px;
 }
+
+#people {
+    /*centrar todo el contenedor*/
+    margin: 0 auto;
+    /*alineación horizontal*/
+    align-items: center;
+    /*centrar dentro del container*/
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 900px;
+    /*espacio entre cada personaje*/
+    grid-gap: 20px;
+}
+
+@media(max-width:890px) {
+    #people {
+        width: 800px;
+    }
+}
+
+@media(max-width:790px) {
+    #people {
+        width: 600px;
+    }
+}
+
+@media(max-width:690px) {
+    #people {
+        width: 400px;
+    }
+}
+
+@media(max-width:460px) {
+    #people {
+        width: 300px;
+    }
+}
+
 
 .section-people h2 {
     padding-left: 70px;
@@ -487,3 +538,49 @@ footer {
     font-family: Castoro;
     font-weight: bold;
 }
+
+.div_people-container {
+    position: relative;
+    margin: 0;
+    border-radius: 10px;
+    background-color: white;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    box-shadow: 16px 15px 12px -10px rgba(0, 0, 0, 0.164);
+  }
+  .div_people-container figure {
+    display: contents;
+  }
+  
+  .div_people-container figure span {
+    font-size: 1.4rem;
+    position: absolute;
+    width: 100px;
+    height: auto;
+    text-align: center;
+    padding: 4px;
+    background: #3481d3;
+    font-weight: bold;
+    border-radius: 16px;
+    z-index: 1; 
+    color: white;
+    bottom: 10px;
+    left: 30px;
+  }
+  .div_people-container figure img {
+    height: 200px;
+    margin-left: 0px;;
+    padding-left: 0px;
+    padding: 0px;
+    border-radius: 10px 0px 0px 10px;
+   
+  }
+  
+  .div_people-container .container-info p {
+    font-size: 1.4rem;
+    padding-left: 15px;
+  }
+  
+  
+  
