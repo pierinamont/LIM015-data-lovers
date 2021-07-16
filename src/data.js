@@ -63,4 +63,9 @@ export const filterfunction = (filterItemsValue) => {
   }
 };
 
-
+// PELICULA SELECCIONADA
+export const selectedData = (moviesTitle) => {
+  console.log(moviesTitle);
+  return data.films.filter(movies => movies.title === moviesTitle);
+}
+ 
