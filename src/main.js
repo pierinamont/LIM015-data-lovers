@@ -88,24 +88,15 @@ functionCloseInfo(movieCross);
 const people = document.getElementById('people')
 
 const functionPeopleSection = (arrayData) => {
-  for (let i = 0; i < arrayData.length; i++) {
-    const copyInfo = arrayData[i]; 
-    console.log(copyInfo); // Objeto con info de la peli
- 
-    const arrayPeople = copyInfo.people; 
-    console.log(arrayPeople); // Array de los personajes
-
-    arrayPeople.forEach((info) => { 
-    //console.log(info.people[0]); // imprime el primer personaje de cada peli
-    //console.log(info.people); // imprime todos los personajes de cada peli
-    //console.log(info);
+    people.innerHTML = '';
+    arrayData.forEach((info) => { 
     const peopleInfo = document.createElement('div');
     peopleInfo.className = 'people-info';
     peopleInfo.innerHTML = `
       <div>
       <!--contenedor del personaje y características-->
         <div class="div_people-container">
-          <input type="text" hidden value="${info.id}" id="${info.id}"/>
+          <input type="text" hidden value="${info.id}"/>
           <figure class="people">
             <span class="name"> ${info.name}</span>
             <i style="background-image: url(${info.img})"></i>
@@ -122,7 +113,7 @@ const functionPeopleSection = (arrayData) => {
         `
         people.appendChild(peopleInfo);
     });
-  }
+  
 }
 functionPeopleSection(data.films)
 
@@ -130,14 +121,14 @@ functionPeopleSection(data.films)
 // EVENTO PARA "VER MAS" //////////
 const moreInfo = document.querySelectorAll('.moreinfo');
 const sectionMovieInfo = document.getElementById('section_movie-info');
-const sectionSelectOption = document.getElementById('section_select-option')
+const sectionSelectOption = document.getElementById('section_select-option');
 const sectionPeople = document.getElementById('section-people');
 
 const functionShowMoreInfo = (info) => {
   info.forEach(info => {
     info.addEventListener('click', (e) => {
       
-      // Ocultar seccion películas
+      // Ocultar seccion películas y contenedor de info
       sectionMovieInfo.style.display = 'none';
       sectionSelectOption.style.display = 'none';
 
@@ -156,6 +147,7 @@ const functionShowMoreInfo = (info) => {
 
       // Llamar funcion para los personajes de la peli seleccionada
       functionPeopleSection(moviePerson);
+
     });
 
   });
@@ -206,3 +198,18 @@ filterItems.addEventListener('change', (e) => {
   functionCloseInfo(newMovieCross);
   functionShowMoreInfo(newMoreInfo);
 });
+
+// FUNCTION PARA REGRESAR A SECCION DE PELICULAS
+const backToMoviesBtn = document.getElementById('btn-section')
+
+backToMoviesBtn.addEventListener('click', () => {
+
+   // Ocultar personajes
+   sectionPeople.style.display = 'none';
+
+  // Mostrar seccion películas
+    sectionMovieInfo.style.display = 'block';
+    sectionSelectOption.style.display = 'block';
+    // location.reload(); => chequear otra forma para que aparezca las peliculas desde el comienzo
+
+})
