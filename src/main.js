@@ -85,7 +85,7 @@ const functionCloseInfo = (close) => {
 functionCloseInfo(movieCross);
 
 // FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PERSONAJES //////////
-const people = document.getElementById('people')
+const people = document.getElementById('people');
 
 const functionPeopleSection = (arrayData) => {
     people.innerHTML = '';
@@ -113,7 +113,6 @@ const functionPeopleSection = (arrayData) => {
         `
         people.appendChild(peopleInfo);
     });
-  
 }
 functionPeopleSection(data.films)
 
@@ -149,6 +148,8 @@ const functionLocationSection = (arrayData) => {
 }
 functionLocationSection(data.films)
 
+// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE VEHICULOS //////////
+//...
 
 // EVENTO PARA "VER MAS" //////////
 const moreInfo = document.querySelectorAll('.moreinfo');
@@ -156,6 +157,7 @@ const sectionMovieInfo = document.getElementById('section_movie-info');
 const sectionSelectOption = document.getElementById('section_select-option');
 const sectionPeople = document.getElementById('section-people');
 const sectionLocation = document.getElementById('section-location');
+// const vehiculos...
 
 const functionShowMoreInfo = (info) => {
   info.forEach(info => {
@@ -171,10 +173,12 @@ const functionShowMoreInfo = (info) => {
 
       // Titulo de pelicul seleccionada
       let moviesTitle = e.currentTarget.id;
+      console.log(moviesTitle);
+      // <p class="moreinfo" id="${info.title}">Ver más</p>
 
       // Funcion que selecciona la data de la peli seleccionada
       const movieSelected = all.selectedData(moviesTitle);
-
+      
       // Personajes de la peli seleccionada
       let moviePerson = movieSelected[0].people;
       console.log(moviePerson);
@@ -182,17 +186,14 @@ const functionShowMoreInfo = (info) => {
       // Locacion de peli seleccionada
       let movieLocation = movieSelected[0].locations;
       console.log(movieLocation);
-
-      // Si no hay lugares para mostrar, ocultar seccion
-      if(movieLocation.length === '') {
-        sectionLocation.style.display = 'none';
-      }
+      
+      // Vehiculos de peli seleccionada
+      
 
       // Imprimir seccion de personajes, locaciones y vehículos
       functionPeopleSection(moviePerson);
       functionLocationSection(movieLocation);
     });
-
   });
 }
 functionShowMoreInfo(moreInfo);
