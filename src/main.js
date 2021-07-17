@@ -139,7 +139,6 @@ const functionLocationSection = (arrayData) => {
             <p><strong>Climate:</strong> ${info.climate}</p>
             <p><strong>Terrain:</strong> ${info.terrain}</p>
             <p><strong>Surface water:</strong> ${info.surface_water}</p>
-            <p><strong>Hair color:</strong> ${info.hair_color}</p>
             <p><strong>Residents:</strong> ${info.residents}</p> 
           </div>
         </div>
@@ -185,7 +184,7 @@ const functionShowMoreInfo = (info) => {
       console.log(movieLocation);
 
       // Si no hay lugares para mostrar, ocultar seccion
-      if(movieLocation === '') {
+      if(movieLocation.length === '') {
         sectionLocation.style.display = 'none';
       }
 
@@ -206,7 +205,7 @@ sortItems.addEventListener('change', (e) => {
   const sortItemsValue = e.currentTarget.value;
   console.log(sortItemsValue);
     
-  // Llama función 'sortfunction' 
+  // Llama función ordenado
   const sortData = all.sortfunction(sortItemsValue);
   functionMoviesSection(sortData);
 
@@ -230,7 +229,7 @@ filterItems.addEventListener('change', (e) => {
   const filterItemsValue = e.currentTarget.value;
   console.log(filterItemsValue);
 
-  // Llama función 'filterfunction'
+  // Llama función de filtrado
   const filterData = all.filterfunction(filterItemsValue);
   functionMoviesSection(filterData);
 
@@ -246,7 +245,27 @@ filterItems.addEventListener('change', (e) => {
   functionLocationSection(newMoreInfo);
 });
 
-// FUNCTION PARA REGRESAR A SECCION DE PELICULAS
+
+// FUNCTION PARA BOTON ALLMOVIES //////////
+const allMovies = document.getElementById('allMovies')
+
+allMovies.addEventListener('click', () => {
+  // Mostrar peliculas
+  functionMoviesSection(data.films);
+
+  // Funcion para mostrar y ocultar info
+  const newPosters = document.querySelectorAll('.poster')
+  const newMovieCross = document.querySelectorAll('.movie-cross');
+  const newMoreInfo = document.querySelectorAll('.moreinfo');
+
+  functionShowInfo(newPosters);
+  functionCloseInfo(newMovieCross);
+  functionShowMoreInfo(newMoreInfo);
+  functionPeopleSection(newMoreInfo);
+  functionLocationSection(newMoreInfo);
+})
+
+// FUNCTION PARA REGRESAR A SECCION DE PELICULAS //////////
 const backToMoviesBtn = document.getElementById('all-movies-btn')
 
 backToMoviesBtn.addEventListener('click', () => {
@@ -258,6 +277,18 @@ backToMoviesBtn.addEventListener('click', () => {
   // Mostrar seccion películas
     sectionMovieInfo.style.display = 'block';
     sectionSelectOption.style.display = 'block';
-    // location.reload(); => chequear otra forma para que aparezca las peliculas desde el comienzo
+    functionMoviesSection(data.films);
 
+    // Funcion para mostrar y ocultar info
+    const newPosters = document.querySelectorAll('.poster')
+    const newMovieCross = document.querySelectorAll('.movie-cross');
+    const newMoreInfo = document.querySelectorAll('.moreinfo');
+
+    functionShowInfo(newPosters);
+    functionCloseInfo(newMovieCross);
+    functionShowMoreInfo(newMoreInfo);
+    functionPeopleSection(newMoreInfo);
+    functionLocationSection(newMoreInfo);
 });
+
+// FUNCION PARA EL BUSCADOR //////////
