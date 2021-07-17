@@ -483,12 +483,16 @@ footer {
 
 /*SECCION PEOPLE*/
 
-.section-people {
+.section-people,
+.section-location,
+.section-vehicles {
     margin: 0 auto;
     margin-bottom: 150px;
 }
 
-#people {
+#people,
+#location,
+#vehicles {
     /*centrar todo el contenedor*/
     margin: 0 auto;
     /*alineación horizontal*/
@@ -503,36 +507,49 @@ footer {
 }
 
 @media(max-width:990px) {
-    #people {
+    #people,
+    #location,
+    #vehicles {
         width: 900px;
     }
 }
 
 @media(max-width:890px) {
-    #people {
+    #people,
+    #location,
+    #vehicles {
         width: 700px;
     }
 }
 
 @media(max-width:790px) {
-    #people {
+    #people,
+    #location,
+    #vehicles {
         width: 500px;
     }
 }
 
 @media(max-width:560px) {
-    #people {
+    #people,
+    #location,
+    #vehicles {
         width: 400px;
     }
 }
 
 @media(max-width:470px) {
-    #people {
+    #people,
+    #location,
+    #vehicles {
         width: 300px;
     }
 }
 
-.section-people h2 {
+
+
+.section-people h2,
+.section-location h2 {
     padding-left: 70px;
     font-size: 3.5rem;
     font-family: Castoro;
