@@ -571,7 +571,8 @@ footer {
 }
 
 .section-people h2,
-.section-location h2 {
+.section-location h2,
+.section-vehicles h2 {
     padding-left: 70px;
     font-size: 3.5rem;
     font-family: Castoro;
