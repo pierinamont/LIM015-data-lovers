@@ -25,6 +25,21 @@ export const sortfunction = (sortItemsValue) => {
                 console.table(latestAnimations);
                 return latestAnimations;
             }
+
+
+
+        case 'a-to-z':
+            {
+                const aToz = data.films.sort((a, b) => a.title.localeCompare(b.title));
+                console.table(aToz);
+                return aToz;
+            }
+        case 'z-to-a':
+            {
+                const zToa = data.films.sort((a, b) => b.title.localeCompare(a.title));
+                console.table(zToa);
+                return zToa;
+            }
         default:
             {
                 break;

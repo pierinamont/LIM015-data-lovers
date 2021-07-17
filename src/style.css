@@ -238,6 +238,24 @@ select {
     font-family: 'Montserrat', sans-serif;
 }
 
+.div_select-container .allMovies {
+    width: 180px;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    background-color: rgba(52, 129, 211, 0.75);
+    font-size: 1.5rem;
+    padding-left: 5px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.div_select-container .allMovies:hover {
+    background-color: rgb(216, 125, 224);
+}
+
 
 /*POSTERS EN CARDS*/
 
@@ -486,6 +504,7 @@ footer {
     font-weight: 200;
 }
 
+
 /*SECCION PEOPLE*/
 
 .section-people,
@@ -551,8 +570,6 @@ footer {
     }
 }
 
-
-
 .section-people h2,
 .section-location h2 {
     padding-left: 70px;
@@ -560,11 +577,13 @@ footer {
     font-family: Castoro;
     font-weight: bold;
 }
+
 .btn-section {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 90px;
 }
+
 .btn-section .all-movies-btn {
     margin-left: 30px;
     font-size: 1.5rem;
@@ -576,6 +595,7 @@ footer {
     height: 50px;
     width: 150px
 }
+
 .btn-section .all-movies-btn:hover {
     background-color: rgb(192, 55, 197);
 }
@@ -591,10 +611,11 @@ footer {
     padding-right: 13px;
     box-shadow: 16px 15px 12px -10px rgba(0, 0, 0, 0.164);
 }
+
 .div_people-container figure {
     display: contents;
 }
-  
+
 .div_people-container .people .name {
     font-size: 1.4rem;
     position: absolute;
@@ -602,18 +623,19 @@ footer {
     height: auto;
     text-align: center;
     padding: 4px;
-    background:rgba(52, 129, 211, 0.75);
+    background: rgba(52, 129, 211, 0.75);
     font-weight: bold;
     border-radius: 16px;
-    z-index: 1; 
+    z-index: 1;
     color: white;
     bottom: 10px;
     left: 30px;
 }
+
 .div_people-container figure i {
     width: 150px;
     height: 200px;
-    margin-left: 0px;;
+    margin-left: 0px;
     padding-left: 0px;
     padding: 0px;
     border-radius: 10px 0px 0px 10px;
@@ -633,6 +655,3 @@ footer {
     padding-left: 15px;
     margin-bottom: 8px;
 }
-  
-  
-  
