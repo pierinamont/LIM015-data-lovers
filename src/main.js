@@ -117,7 +117,7 @@ const functionPeopleSection = (arrayData) => {
 }
 functionPeopleSection(data.films)
 
-// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE PERSONAJES //////////
+// FUNCIÓN QUE CREA LA ESTRUCTURA DE LA SECCIÓN DE LOCACIONES //////////
 const location = document.getElementById('location')
 
 const functionLocationSection = (arrayData) => {
