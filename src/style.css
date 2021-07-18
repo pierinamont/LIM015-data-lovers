@@ -511,7 +511,7 @@ footer {
 .section-location,
 .section-vehicles {
     margin: 0 auto;
-    margin-bottom: 150px;
+    margin-bottom: 45px;
 }
 
 #people,
@@ -578,7 +578,26 @@ footer {
     font-family: Castoro;
     font-weight: bold;
 }
+.section-people .number-of-people-container {
+    background-color: white;
+    padding-top: 10px;
+    border-radius: 15px;
+    width: 150px;
+    margin-left: 20px;
+    text-align: center;
+}
 
+.number-of-people-container p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: rgba(24, 24, 24, 0.781);
+}
+
+.number-of-people-container .number-people {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgba(192, 55, 197, 0.781);
+}
 .btn-section {
     display: flex;
     flex-wrap: wrap;
@@ -617,7 +636,8 @@ footer {
     display: contents;
 }
 
-.div_people-container .people .name {
+.div_people-container .people .name,
+.div_vehicle-container  .vehicle .name {
     font-size: 1.4rem;
     position: absolute;
     width: 100px;
@@ -651,8 +671,54 @@ footer {
     padding-right: 2px;
 }
 
-.div_people-container .container-info p {
+.div_people-container .container-info p,
+.div_vehicle-container .container-info p {
     font-size: 1.4rem;
     padding-left: 15px;
     margin-bottom: 8px;
 }
+.div_vehicle-container {
+    position: relative;
+    margin: 0;
+    border-radius: 10px;
+    background-color: white;
+    width: 480px;
+    height: 260px;
+    display: flex;
+    padding-right: 13px;
+    box-shadow: 16px 15px 12px -10px rgba(0, 0, 0, 0.164);
+}
+
+.div_vehicle-container  figure {
+    display: contents;
+}
+
+.div_vehicle-container figure i {
+    width: 220px;
+    height: 260px;
+    margin-left: 0px;
+    padding-left: 0px;
+    padding: 0px;
+    border-radius: 10px 0px 0px 10px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.div_vehicle-container .container-info {
+    align-items: center;
+    margin-top: 15px;
+    padding-right: 2px;
+    width: 380px;
+}
+
+@media(max-width: 540px) {
+    .div_vehicle-container {
+        height: 400px;
+        width: 340px;
+    }
+    .div_vehicle-container figure i {
+        height: 400px;
+    }
+}
+

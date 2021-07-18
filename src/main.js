@@ -158,9 +158,9 @@ const functionVehicleSection = (arrayData) => {
     vehiculoInfo.innerHTML=`
     <div>
     <!--contenedor del lugar y características-->
-      <div class="div_people-container">
+      <div class="div_vehicle-container">
         <input type="text" hidden value="${info.id}"/>
-        <figure class="people">
+        <figure class="vehicle">
           <span class="name"> ${info.name}</span>
           <i style="background-image: url(${info.img})"></i>
         </figure>
@@ -178,6 +178,20 @@ const functionVehicleSection = (arrayData) => {
 }
 functionVehicleSection(data.films)
 
+// FUNCTION PARA MOSTRAR CANTIDAD DE PERSONAJES //////////
+const numPeople = document.getElementById('number-people')
+
+const numberOfPeople = (arrayData) => {
+  let num = 0;
+  for(let i = 0; i < arrayData.length; i++) {
+    let people = arrayData[i].people;
+    console.log(people);
+    num++;
+    numPeople.innerHTML = num;
+  };
+}
+numberOfPeople(data.films);
+
 // EVENTO PARA "VER MAS" //////////
 const moreInfo = document.querySelectorAll('.moreinfo');
 const sectionMovieInfo = document.getElementById('section_movie-info');
@@ -194,10 +208,11 @@ const functionShowMoreInfo = (info) => {
       sectionMovieInfo.style.display = 'none';
       sectionSelectOption.style.display = 'none';
 
-      // Mostrar personajes, locaciones
+      // Mostrar personajes, locaciones, vehiculos
       sectionPeople.style.display = 'block';
       sectionLocation.style.display = 'block';
       sectionVehiculos.style.display= 'block';
+
 
       // Titulo de pelicula seleccionada
       let moviesTitle = e.currentTarget.id;
@@ -209,20 +224,29 @@ const functionShowMoreInfo = (info) => {
       
       // Personajes de la peli seleccionada
       let moviePerson = movieSelected[0].people;
-      console.log(moviePerson);
 
       // Locacion de peli seleccionada
       let movieLocation = movieSelected[0].locations;
-      console.log(movieLocation);
       
       // Vehiculos de peli seleccionada
       let movieVehiculo= movieSelected[0].vehicles;
-      console.log(movieVehiculo);
 
-      // Imprimir seccion de personajes, locaciones y vehículos
-      functionPeopleSection(moviePerson);
-      functionLocationSection(movieLocation);
-      functionVehicleSection(movieVehiculo);
+      // Cantidad de personajes de la peli selecc
+      let numOfPeople = movieSelected[0].people;
+      
+      // Ocultar secciones cuando están vacias
+      if (movieLocation.length === 0) {
+        sectionLocation.style.display = 'none';
+      }
+      if (movieVehiculo.length === 0) {
+        sectionVehiculos.style.display= 'none';
+      }
+
+      // Imprimir secciones de: 
+      functionPeopleSection(moviePerson); // personajes
+      functionLocationSection(movieLocation); // locaciones
+      functionVehicleSection(movieVehiculo); // vehículos
+      numberOfPeople(numOfPeople); // cantidad de personajes
 
     });
   });
@@ -278,7 +302,7 @@ filterItems.addEventListener('change', (e) => {
 });
 
 
-// FUNCTION PARA BOTON ALLMOVIES //////////
+// FUNCCION PARA BOTON ALLMOVIES //////////
 const allMovies = document.getElementById('allMovies')
 
 allMovies.addEventListener('click', () => {
@@ -323,3 +347,4 @@ backToMoviesBtn.addEventListener('click', () => {
     functionPeopleSection(newMoreInfo);
     functionLocationSection(newMoreInfo);
 });
+
