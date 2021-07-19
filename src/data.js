@@ -88,7 +88,20 @@ export const filterfunction = (filterItemsValue, data) => {
 // PELICULA SELECCIONADA
 export const selectedData = (moviesTitle) => {
     //console.log(moviesTitle);
-    return data.films.filter(movies => movies.title === moviesTitle);
+    const select = data.films.filter(movies => movies.title === moviesTitle);
+    //console.log(select);
+    return select;
 }
 
 
+
+// CONTADOR DE PERSONAJES
+export const numOfCharacters =(arrayData) => {
+let num = 0;
+  for(let i = 0; i < arrayData.length; i++) {
+     num = i + 1;
+  }
+  console.log(num);
+  return num;
+}
+console.log(numOfCharacters)

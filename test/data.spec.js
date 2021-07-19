@@ -1,6 +1,7 @@
 //import { example, anotherExample } from '../src/data.js';
 import * as all from '../src/data.js';
 
+// TEST PARA SORT
 describe('sortfunction', () => {
     it('is a function', () => {
         expect(typeof all.sortfunction).toBe('function');
@@ -39,6 +40,7 @@ describe('sortfunction', () => {
 
 });
 
+// TEST PARA FILTER
 describe('filterfunction', () => {
     it('is a function', () => {
         expect(typeof all.filterfunction).toBe('function');
@@ -73,3 +75,48 @@ describe('filterfunction', () => {
     });
 
 });
+
+// PELICULA SELECCIONADA
+describe('selectedData', () => {
+    it('is a function', () => {
+        expect(typeof all.selectedData).toBe('function');
+    });
+
+    it("Retorna un objeto", () => {
+        const dataTest = [{ producer: "Toshio Suzuki", title: "Pom Poko"}]
+        expect(typeof all.selectedData(dataTest)).toBe('object');
+    });
+
+    it("Retorna el mismo titulo", () => {
+        const dataTest = [{title: "Pom Poko"}]
+        expect(all.selectedData(dataTest)).toEqual[{title: "Pom Poko"}];
+    });
+
+});
+
+// TEST PARA CONTADOR DE PERSONAJES
+describe('numOfCharacters', () => {
+    it('is a function', () => {
+        expect(typeof all.numOfCharacters).toBe('function');
+    });
+
+    it("Retorna cantidad de personajes", () => {
+        const dataTest = [{ name: "kiki"}, { name: "Jiji"}, {name: "Ursula" }, {name: "Tombo" }, {people: "Osono" }, {people: "Fukuo" }];
+        expect(all.numOfCharacters(dataTest)).toEqual(6);
+    });
+})
+
+// //TEST PARA BUSCADOR
+// describe('searchFilters', () => {
+//     it('is a function', () => {
+//         expect(typeof all.searchFilters).toBe('function');
+//     });
+
+//     // it("Se muestran peliculas por lo que esta en el buscador", () => {
+//     //     const dataTest = [{ title: "The Tale of the Princess Kaguya"}];
+//     //     expect(all.searchFilters(dataTest)).toEqual([
+//     //         { title: "The Tale of the Princess Kaguya"},
+//     //     ]);
+//     // });
+// });
+

@@ -182,13 +182,7 @@ functionVehicleSection(data.films)
 const numPeople = document.getElementById('number-people')
 
 const numberOfPeople = (arrayData) => {
-  let num = 0;
-  for(let i = 0; i < arrayData.length; i++) {
-    let people = arrayData[i].people;
-    console.log(people);
-    num++;
-    numPeople.innerHTML = num;
-  }
+  numPeople.innerHTML =  all.numOfCharacters(arrayData);
 }
 numberOfPeople(data.films);
 
@@ -348,6 +342,7 @@ backToMoviesBtn.addEventListener('click', () => {
     functionLocationSection(newMoreInfo);
 });
 
+
 // BUSCADOR DE PELICULA SELECCIONADA
 
 const searchFilters = (input, selector) => {
@@ -367,4 +362,5 @@ const searchFilters = (input, selector) => {
 }
 
 searchFilters(".searchMovie",".movie-info")
+
 
