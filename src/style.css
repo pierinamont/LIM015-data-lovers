@@ -6,7 +6,9 @@
 
 html {
     font-size: 62.5%;
-}
+    cursor: url('/src/images/cursor.cur'), auto;
+    
+}   
 
 :root {
     --header-color: hsla(245, 37%, 12%, 0.712);
@@ -114,7 +116,6 @@ nav>a:hover {
     font-size: 1.4rem;
     color: white;
     background-color: var(--header-color);
-    cursor: pointer;
     top: 60%;
 }
 
@@ -202,10 +203,13 @@ nav>a:hover {
     /* justify-content: center;*/
     margin-bottom: 100px;
     margin-top: 30px;
+    
 }
 
 .div_select-container select:hover {
-    box-shadow: 0 0 10px 0 rgba(131, 131, 131, 0.63);
+    box-shadow: 0 0 10px 0 rgba(73, 73, 73, 0.63);
+    transition: all 500ms ease-out;
+    
 }
 
 select {
@@ -229,13 +233,21 @@ select {
     height: 40px;
     border-radius: 10px;
     border: none;
+    box-shadow: 0 0 10px 0 rgba(73, 73, 73, 0.63);
+    font-family: 'Montserrat', sans-serif;
+    padding-left: 12px;   
 }
+
 
 .div_select-container #search::placeholder {
     font-size: 1.5rem;
     color: #666666;
-    padding-left: 10px;
+    padding-left: 1px;
     font-family: 'Montserrat', sans-serif;
+}
+
+.filter {
+    display: none;
 }
 
 .div_select-container .allMovies {
@@ -254,6 +266,8 @@ select {
 
 .div_select-container .allMovies:hover {
     background-color: rgb(216, 125, 224);
+    box-shadow: 0 0 10px 0 rgba(73, 73, 73, 0.63);
+    transition: all 500ms ease-out;
 }
 
 
@@ -276,6 +290,7 @@ select {
     width: 900px;
     /*espacio entre cada poster*/
     grid-gap: 20px;
+    
 }
 
 @media(max-width:890px) {
@@ -310,6 +325,7 @@ select {
     border-radius: 15px;
     bottom: 16px;
     left: 10px;
+    
 }
 
 .div_poster-container i {
@@ -332,10 +348,11 @@ select {
 .div_poster-container figure img {
     width: 180px;
     border-radius: 16px;
+    transition: all 350ms ease-out;
 }
 
 .div_poster-container figure img:hover {
-    box-shadow: 16px 15px 12px -10px rgba(0, 0, 0, 0.38);
+    box-shadow: 16px 15px 12px -10px rgba(0, 0, 0, 0.616);
 }
 
 
@@ -348,8 +365,10 @@ select {
     padding: 8px;
     background: rgba(0, 0, 14, 0.86);
     border-radius: 16px;
-    /*Para que aparezca sobre todos los posters*/
+   
+      /*Para que aparezca sobre todos los posters*/
     z-index: 1;
+   
 }
 
 @media(max-width:1022px) {
@@ -368,6 +387,8 @@ select {
     font-size: 12px;
     color: white;
     border-radius: 30px;
+    /*transform:scale(1);*/
+   
 }
 
 .movie-info h2 {

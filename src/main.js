@@ -188,7 +188,7 @@ const numberOfPeople = (arrayData) => {
     console.log(people);
     num++;
     numPeople.innerHTML = num;
-  };
+  }
 }
 numberOfPeople(data.films);
 
@@ -216,7 +216,7 @@ const functionShowMoreInfo = (info) => {
 
       // Titulo de pelicula seleccionada
       let moviesTitle = e.currentTarget.id;
-      console.log(moviesTitle);
+      //console.log(moviesTitle);
       // <p class="moreinfo" id="${info.title}">Ver más</p>
 
       // Funcion que selecciona la data de la peli seleccionada
@@ -259,10 +259,10 @@ const sortItems = document.querySelector('.sort-items');
 sortItems.addEventListener('change', (e) => {
     // obtener valor de etiqueta select
     const sortItemsValue = e.currentTarget.value;
-    console.log(sortItemsValue);
+    //console.log(sortItemsValue);
 
     // Llama función ordenado
-    const sortData = all.sortfunction(sortItemsValue);
+    const sortData = all.sortfunction(sortItemsValue, data.films);
     functionMoviesSection(sortData);
 
     // Funcion para mostrar y ocultar info
@@ -283,10 +283,10 @@ const filterItems = document.querySelector('.filter-items');
 filterItems.addEventListener('change', (e) => {
     // obtener valor de etiqueta select
     const filterItemsValue = e.currentTarget.value;
-    console.log(filterItemsValue);
+    //console.log(filterItemsValue);
 
     // Llama función de filtrado
-    const filterData = all.filterfunction(filterItemsValue);
+    const filterData = all.filterfunction(filterItemsValue, data.films);
     functionMoviesSection(filterData);
 
     // Funcion para mostrar y ocultar info
@@ -348,3 +348,21 @@ backToMoviesBtn.addEventListener('click', () => {
     functionLocationSection(newMoreInfo);
 });
 
+//BUSCAR PELICULAS
+searchFilters(".searchMovie",".movie-info")
+
+function searchFilters(input, selector){
+  document.addEventListener("keyup", (e) => {
+      if(e.target.matches(input)) {
+        if (e.key === "Escape") e.target.value = "";
+         //console.log(e.key);
+         //console.log(e.target.value);
+          document.querySelectorAll(selector).forEach((el)=> 
+          el.textContent.toLowerCase().includes(e.target.value)
+          ? el.classList.remove("filter")
+          :el.classList.add("filter")
+          );
+      }
+  });
+
+}
