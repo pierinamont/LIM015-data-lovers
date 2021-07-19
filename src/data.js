@@ -91,4 +91,20 @@ export const selectedData = (moviesTitle) => {
     return data.films.filter(movies => movies.title === moviesTitle);
 }
 
+// BUSCADOR DE PELICULA SELECCIONADA
+export const searchFilters = (input, selector)=> {
+    document.addEventListener("keyup", (e) => {
+        if(e.target.matches(input)) {
+            if (e.key === "Escape") e.target.value = "";
+           //console.log(e.key);
+           //console.log(e.target.value);
+           document.querySelectorAll(selector).forEach((el)=> 
+            el.textContent.toLowerCase().includes(e.target.value)
+            ? el.classList.remove("filter")
+            :el.classList.add("filter")
+            );
+        }
+    });
+    
+}
 
