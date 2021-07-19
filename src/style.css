@@ -84,6 +84,7 @@ nav>a {
     transition: all 500ms ease;
     border-bottom: 4px solid transparent;
     padding-bottom: 20px;
+    cursor: url('/src/images/dedo.cur'), auto;
 }
 
 nav>a:hover {
@@ -117,10 +118,12 @@ nav>a:hover {
     color: white;
     background-color: var(--header-color);
     top: 60%;
+    cursor: url('/src/images/dedo.cur'), auto;
 }
 
 .section_cover-page a:hover {
     background-color: black;
+    transition: all 500ms ease;
 }
 
 @media (max-width: 800px) {
@@ -208,7 +211,7 @@ nav>a:hover {
 
 .div_select-container select:hover {
     box-shadow: 0 0 10px 0 rgba(73, 73, 73, 0.63);
-    transition: all 500ms ease-out;
+    transition: all 500ms ease;
     
 }
 
@@ -222,7 +225,7 @@ select {
     background-color: var(--green-btn);
     font-size: 1.5rem;
     padding-left: 5px;
-    cursor: pointer;
+    cursor: url('/src/images/dedo.cur'), auto;
     margin-bottom: 8px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -259,7 +262,7 @@ select {
     background-color: rgba(52, 129, 211, 0.75);
     font-size: 1.5rem;
     padding-left: 5px;
-    cursor: pointer;
+    cursor: url('/src/images/dedo.cur'), auto;
     margin-bottom: 8px;
     font-family: 'Montserrat', sans-serif;
 }
@@ -267,7 +270,7 @@ select {
 .div_select-container .allMovies:hover {
     background-color: rgb(216, 125, 224);
     box-shadow: 0 0 10px 0 rgba(73, 73, 73, 0.63);
-    transition: all 500ms ease-out;
+    transition: all 500ms ease;
 }
 
 
@@ -275,7 +278,7 @@ select {
 
 .section_movie-info {
     margin: 0 auto;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
 }
 
 #root {
@@ -341,14 +344,14 @@ select {
 
 .div_poster-container figure {
     position: relative;
-    cursor: pointer;
+    cursor: url('/src/images/dedo.cur'), auto;
     margin: 0;
 }
 
 .div_poster-container figure img {
     width: 180px;
     border-radius: 16px;
-    transition: all 350ms ease-out;
+    transition: all 500ms ease;
 }
 
 .div_poster-container figure img:hover {
@@ -399,7 +402,7 @@ select {
 .movie-info #cross {
     width: 15px;
     height: 15px;
-    cursor: pointer;
+    cursor: url('/src/images/dedo.cur'), auto;
 }
 
 .movie-info .movie-cross {
@@ -445,7 +448,7 @@ select {
 .movie-info .moreinfo {
     margin-right: 3px;
     color: #D87DE0;
-    cursor: pointer;
+    cursor: url('/src/images/dedo.cur'), auto;
 }
 
 .movie-info .moreinfo:hover {
@@ -484,6 +487,7 @@ footer {
     align-items: center;
     justify-content: center;
     margin: 3rem 0 2rem 0;
+    
 }
 
 .socials li {
@@ -498,6 +502,8 @@ footer {
 .socials a i {
     font-size: 2.5rem;
     transition: color .3s ease;
+    cursor: url('/src/images/dedo.cur'), auto;
+
 }
 
 .socials a:hover i {
@@ -623,22 +629,27 @@ footer {
     display: flex;
     flex-wrap: wrap;
     margin-bottom: 90px;
+
 }
 
 .btn-section .all-movies-btn {
     margin-left: 30px;
     font-size: 1.5rem;
-    cursor: pointer;
+    cursor: url('/src/images/dedo.cur'), auto;
     border-radius: 10px;
     border: none;
     color: white;
     background-color: var(--green-btn);
     height: 50px;
     width: 150px
+    
 }
 
 .btn-section .all-movies-btn:hover {
     background-color: rgb(192, 55, 197);
+    transition: all 500ms ease;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.63);
+    
 }
 
 .div_people-container {

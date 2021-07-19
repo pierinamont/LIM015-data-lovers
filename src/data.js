@@ -93,29 +93,9 @@ export const selectedData = (moviesTitle) => {
     return select;
 }
 
-// BUSCADOR DE PELICULA SELECCIONADA
-// input = buscador
-// selector = cada poster
-// data = data.films
-// export const searchFilters = (input, selector)=> {
-//     document.addEventListener("keyup", (e) => {
-//         if(e.target.matches(input)) {
-//             if (e.key === "Escape") e.target.value = "";
-//            //console.log(e.key);
-//            //console.log(e.target.value);
-//            document.querySelectorAll(selector).forEach((el)=> 
-           
-//             el.textContent.toLowerCase().includes(e.target.value)
-//             ? el.classList.remove("filter") // display "block"
-//             :el.classList.add("filter") //display none
-            
-//             );
-//         }
-//     });
-// }
+
 
 // CONTADOR DE PERSONAJES
-
 export const numOfCharacters =(arrayData) => {
 let num = 0;
   for(let i = 0; i < arrayData.length; i++) {
@@ -124,5 +104,4 @@ let num = 0;
   console.log(num);
   return num;
 }
-
 console.log(numOfCharacters)
