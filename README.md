@@ -1,4 +1,4 @@
-# Strudio Ghibli - Proyecto 
+# Studio Ghibli - Proyecto 
 Este producto es una página web que va dirigido a personas que les gusta el anime y quieren estar más informados sobre las películas del Studio Ghibli. Por ende, dentro de la plataforma, estos usuarios podrán acceder a todas las películas, contando con información relevente como el año de su estreno, su descripción, el director, productor, personajes, locaciones y vehículos. Toda esta información puede ser manejada por los usuarios, de tal manera que puedan filtrarla y ordenarla según diversas especificaciones.
 
 Este proyecto fue creado para el Bootcamp de  <a  href="https://www.laboratoria.la">Laboratoria</a> - Lima 015 💛

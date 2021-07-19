@@ -88,23 +88,41 @@ export const filterfunction = (filterItemsValue, data) => {
 // PELICULA SELECCIONADA
 export const selectedData = (moviesTitle) => {
     //console.log(moviesTitle);
-    return data.films.filter(movies => movies.title === moviesTitle);
+    const select = data.films.filter(movies => movies.title === moviesTitle);
+    //console.log(select);
+    return select;
 }
 
 // BUSCADOR DE PELICULA SELECCIONADA
-export const searchFilters = (input, selector)=> {
-    document.addEventListener("keyup", (e) => {
-        if(e.target.matches(input)) {
-            if (e.key === "Escape") e.target.value = "";
-           //console.log(e.key);
-           //console.log(e.target.value);
-           document.querySelectorAll(selector).forEach((el)=> 
-            el.textContent.toLowerCase().includes(e.target.value)
-            ? el.classList.remove("filter")
-            :el.classList.add("filter")
-            );
-        }
-    });
-    
+// input = buscador
+// selector = cada poster
+// data = data.films
+// export const searchFilters = (input, selector)=> {
+//     document.addEventListener("keyup", (e) => {
+//         if(e.target.matches(input)) {
+//             if (e.key === "Escape") e.target.value = "";
+//            //console.log(e.key);
+//            //console.log(e.target.value);
+//            document.querySelectorAll(selector).forEach((el)=> 
+           
+//             el.textContent.toLowerCase().includes(e.target.value)
+//             ? el.classList.remove("filter") // display "block"
+//             :el.classList.add("filter") //display none
+            
+//             );
+//         }
+//     });
+// }
+
+// CONTADOR DE PERSONAJES
+
+export const numOfCharacters =(arrayData) => {
+let num = 0;
+  for(let i = 0; i < arrayData.length; i++) {
+     num = i + 1;
+  }
+  console.log(num);
+  return num;
 }
 
+console.log(numOfCharacters)
