@@ -25,23 +25,20 @@ Este proyecto fue creado para el Bootcamp de  <a  href="https://www.laboratoria.
 
 El proyecto estuvo pensado para lucir como una página web de Studio Ghibli. Esta cuenta con una seccion de header, donde vemos el logo y un paisaje que refleja las animaciones del estudio. También se proporcionó una sección para el creador Hayao Miyazaki, con una frase inspiradora. Y finalmente la sección de películas, en donde se puede ordenar, filtrar, buscar y acceder a la información de las animaciones. Así mismo, se pueden ver los personajes, locaciones y vehículos de cada película.
 
+👉 Dale un vistazo al [Figma](https://www.figma.com/file/B8H0RKO5TnX4x5GfPMqVx4/Data-Lovers?node-id=0%3A1) del proyecto.
 
 
 ## 2. Historias de usuario
 
-En este proyecto **construirás una _página web_ para visualizar un
-_conjunto (set) de datos_** que se adecúe a lo que descubras que tu usuario
-necesita.
+[![historiausuario.png](https://i.postimg.cc/K8y9sKzB/historiausuario.png)](https://postimg.cc/qzjXNv2v)
 
 
 
 ## 3. Prototipo de baja fidelidad
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+[![dibujo.png](https://i.postimg.cc/654SPJhJ/dibujo.png)](https://postimg.cc/6ywY7PSY)
 
-## 3. Plan de acción
+## 4. Plan de acción
 
 El objetivo principal de este proyecto es que aprendas a diseñar y construir una
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
@@ -70,18 +67,18 @@ usuario necesita.
 * [ ] [Manipular objects (key | value)](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Object)
 * [x] [Uso ES modules](https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/M%C3%B3dulos) ([`import`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
 | [`export`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export))
-* [ ] [Diferenciar entre expression y statements.](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
-* [ ] [Diferenciar entre tipos de datos atómicos y estructurados.](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures)
+* [x] [Diferenciar entre expression y statements.](https://openclassrooms.com/en/courses/4309531-descubre-las-funciones-en-javascript/5108986-diferencia-entre-expresion-y-sentencia)
+* [x] [Diferenciar entre tipos de datos atómicos y estructurados.](https://developer.mozilla.org/es/docs/Web/JavaScript/Data_structures)
 
 ### Testing
 
-* [ ] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
+* [x] [Testeo unitario.](https://jestjs.io/docs/es-ES/getting-started)
 
 ### Estructura del código y guía de estilo
 
-* [ ] [Organizar y dividir el código en módulos (Modularización)](https://medium.com/@sebastianpaduano/modularizaci%C3%B3n-en-javascript-538bd6c75fa)
-* [ ] Uso de identificadores descriptivos ([Nomenclatura](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/es/naming-conventions.html) | [Semántica](https://geekytheory.com/semantica-coder))
-* [ ] Uso de linter (ESLINT)
+* [x] [Organizar y dividir el código en módulos (Modularización)](https://medium.com/@sebastianpaduano/modularizaci%C3%B3n-en-javascript-538bd6c75fa)
+* [x] Uso de identificadores descriptivos ([Nomenclatura](http://snowdream.github.io/javascript-style-guide/javascript-style-guide/es/naming-conventions.html) | [Semántica](https://geekytheory.com/semantica-coder))
+* [x] Uso de linter (ESLINT)
 
 ### Git y GitHub
 
@@ -98,23 +95,23 @@ usuario necesita.
 
 ## 9. Checklist
 
-* [ ] Usa VanillaJS.
-* [ ] No hace uso de `this`.
+* [x] Usa VanillaJS.
+* [x] No hace uso de `this`.
 * [ ] Pasa linter (`npm run pretest`)
-* [ ] Pasa tests (`npm test`)
-* [ ] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
+* [x] Pasa tests (`npm test`)
+* [x] Pruebas unitarias cubren un mínimo del 70% de statements, functions y
   lines y branches.
-* [ ] Incluye un _plan de acción_ de tus objetivos de aprendizaje prioritizado en `README.md` (o otro archivo).
-* [ ] Incluye _Definición del producto_ clara e informativa en `README.md`.
-* [ ] Incluye historias de usuario en `README.md`.
-* [ ] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
+* [x] Incluye un _plan de acción_ de tus objetivos de aprendizaje prioritizado en `README.md` (o otro archivo).
+* [x] Incluye _Definición del producto_ clara e informativa en `README.md`.
+* [x] Incluye historias de usuario en `README.md`.
+* [x] Incluye _sketch_ de la solución (prototipo de baja fidelidad) en
   `README.md`.
-* [ ] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
+* [x] Incluye _Diseño de la Interfaz de Usuario_ (prototipo de alta fidelidad)
   en `README.md`.
-* [ ] Incluye link a Zeplin en `README.md`.
+* [x] Incluye link a Zeplin en `README.md`.
 * [ ] Incluye el listado de problemas que detectaste a través de tests de
   usabilidad en el `README.md`.
-* [ ] UI: Muestra lista y/o tabla con datos y/o indicadores.
-* [ ] UI: Permite ordenar data por uno o más campos (asc y desc).
-* [ ] UI: Permite filtrar data en base a una condición.
-* [ ] UI: Es _responsive_.
+* [x] UI: Muestra lista y/o tabla con datos y/o indicadores.
+* [x] UI: Permite ordenar data por uno o más campos (asc y desc).
+* [x] UI: Permite filtrar data en base a una condición.
+* [x] UI: Es _responsive_.

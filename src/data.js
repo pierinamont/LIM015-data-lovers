@@ -101,7 +101,7 @@ let num = 0;
   for(let i = 0; i < arrayData.length; i++) {
      num = i + 1;
   }
-  console.log(num);
+  //console.log(num);
   return num;
 }
-console.log(numOfCharacters)
+//console.log(numOfCharacters)
