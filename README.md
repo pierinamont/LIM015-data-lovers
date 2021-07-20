@@ -44,6 +44,8 @@ El objetivo principal de este proyecto es que aprendas a diseñar y construir un
 interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
 usuario necesita.
 
+## 5. Objetivos de aprendizaje
+
 ### HTML y CSS
 
 * [x] [Uso de HTML semántico.](https://developer.mozilla.org/en-US/docs/Glossary/Semantics#Semantics_in_HTML)
