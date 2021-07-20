@@ -106,17 +106,5 @@ describe('numOfCharacters', () => {
     });
 })
 
-// //TEST PARA BUSCADOR
-// describe('searchFilters', () => {
-//     it('is a function', () => {
-//         expect(typeof all.searchFilters).toBe('function');
-//     });
 
-//     // it("Se muestran peliculas por lo que esta en el buscador", () => {
-//     //     const dataTest = [{ title: "The Tale of the Princess Kaguya"}];
-//     //     expect(all.searchFilters(dataTest)).toEqual([
-//     //         { title: "The Tale of the Princess Kaguya"},
-//     //     ]);
-//     // });
-// });
 
