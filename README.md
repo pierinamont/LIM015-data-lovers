@@ -27,22 +27,43 @@ El proyecto estuvo pensado para lucir como una página web de Studio Ghibli. Est
 
 👉 Dale un vistazo al [Figma](https://www.figma.com/file/B8H0RKO5TnX4x5GfPMqVx4/Data-Lovers?node-id=0%3A1) del proyecto.
 
-
 ## 2. Historias de usuario
 
 [![historiausuario.png](https://i.postimg.cc/K8y9sKzB/historiausuario.png)](https://postimg.cc/qzjXNv2v)
-
-
 
 ## 3. Prototipo de baja fidelidad
 
 [![dibujo.png](https://i.postimg.cc/654SPJhJ/dibujo.png)](https://postimg.cc/6ywY7PSY)
 
 ## 4. Plan de acción
+1. Conocer al usuario
+2. Armar las historias de usuario y criterios de aceptación 
+3. Elaborar prototipo de alta fidelidad en Figma 
+4. Feedback de usuarios para mejorar prototipo
+5. Mejorar el prototipo
+6. Implementar la interfaz (html/css/js)
+7. Pantalla de inicio (header con botón y sección de Hayao)
+8. Sección de películas: Mostrar los posters en divs
+9. Sección de películas: Colocar div flotante donde se muestra título, descripción, etc
+10. Sección de películas: Ordenar data según especificaciones:
+    - Por score 
+    - Por year of release
+    - Latest animations
+    - De la A a la Z
+    - De la Z a la A
+      - Testing de sort 
+11. Sección de películas: Filtrar data según especificaciones
+    - Top 5
+    - Directed by Hayao
+    - Directed by Isao
+    - Produced by Toshio
+      - Testing de filtrado
 
-El objetivo principal de este proyecto es que aprendas a diseñar y construir una
-interfaz web donde se pueda visualizar y manipular data, entendiendo lo que el
-usuario necesita.
+Agregar las secciones 
+* Sección de personajes: Mostrar los personajes en divs.
+* Sección de personajes: Calcular cantidad de personajes.
+* Sección de locaciones: Mostrar los personajes en divs.
+* Sección de Vehiculos: Mostrar los personajes en divs.
 
 ## 5. Objetivos de aprendizaje
 
@@ -117,3 +138,4 @@ usuario necesita.
 * [x] UI: Permite ordenar data por uno o más campos (asc y desc).
 * [x] UI: Permite filtrar data en base a una condición.
 * [x] UI: Es _responsive_.
+
